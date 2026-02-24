@@ -1,0 +1,166 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Suominettipelit | 404</title>
+  <meta name="description" content="We could not find that page.">
+  <link rel="icon" href="favicon.ico">
+  <style>
+
+    @font-face {
+      font-family: "Happy Vibes";
+      src: url("happy-vibes-happy-vibes-svg-400.otf") format("opentype");
+      font-weight: 400;
+      font-style: normal;
+      font-display: swap;
+    }
+    @font-face {
+      font-family: "Happy Vibes Outline";
+      src: url("happy-vibes-happy-vibes-outline-svg-400.otf") format("opentype");
+      font-weight: 400;
+      font-style: normal;
+      font-display: swap;
+    }
+    :root {
+      --bg: #f6f1e7;
+      --ink: #1c1a15;
+      --muted: #6a5f52;
+      --accent: #e55a3d;
+      --teal: #0f818a;
+      --gold: #f2c94c;
+      --line: #e7d7c7;
+      --shadow: 0 18px 40px rgba(20, 16, 10, 0.12);
+    }
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+    body {
+      font-family: "Palatino Linotype", "Book Antiqua", Palatino, serif;
+      color: var(--ink);
+      background: radial-gradient(circle at top, #fff5e6 0%, #f6f1e7 55%, #f0e5d8 100%);
+      min-height: 100vh;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      padding: 24px;
+    }
+    body::before {
+      content: "";
+      position: fixed;
+      inset: 0;
+      z-index: -1;
+      background:
+        radial-gradient(240px 240px at 15% 20%, rgba(15, 129, 138, 0.16), transparent 70%),
+        radial-gradient(260px 260px at 85% 15%, rgba(242, 201, 76, 0.2), transparent 72%);
+    }
+    h1 {
+      font-family: "Happy Vibes", "Trebuchet MS", "Lucida Sans Unicode", "Lucida Grande", sans-serif;
+      line-height: 1.2;
+      margin-bottom: 12px;
+    }
+    .nf4-wrap-8k2m9p { width: 100%; }
+    .nf4-card-3v7c1q {
+      max-width: 520px;
+      margin: 0 auto;
+      background: #fff;
+      border-radius: 24px;
+      padding: 28px;
+      border: 1px solid var(--line);
+      box-shadow: var(--shadow);
+      display: grid;
+      gap: 12px;
+    }
+    .nf4-kicker-4n1d8b {
+      text-transform: uppercase;
+      letter-spacing: 2px;
+      font-size: 0.8rem;
+      color: var(--teal);
+      font-weight: 700;
+    }
+    .nf4-note-6s9f2l {
+      color: var(--muted);
+      border-left: 3px solid var(--gold);
+      padding-left: 10px;
+      font-size: 0.9rem;
+    }
+
+    .nf4-cookie-7q3m8t {
+      position: fixed;
+      inset: auto 16px 16px 16px;
+      background: #fff;
+      border-radius: 16px;
+      border: 1px solid var(--line);
+      box-shadow: var(--shadow);
+      z-index: 30;
+    }
+    .nf4-cookiein-5j1c6r {
+      display: grid;
+      gap: 12px;
+      padding: 16px;
+      color: var(--muted);
+    }
+    .nf4-cookieactions-9p4d7h {
+      display: flex;
+      gap: 10px;
+      flex-wrap: wrap;
+    }
+    .nf4-cookieactions-9p4d7h button {
+      padding: 8px 14px;
+      border-radius: 999px;
+      font-weight: 700;
+      border: 1px solid var(--teal);
+      color: var(--teal);
+      background: transparent;
+      cursor: pointer;
+      font-family: inherit;
+    }
+    .nf4-cookieactions-9p4d7h button:first-child {
+      background: var(--teal);
+      color: #fff;
+    }
+  </style>
+</head>
+<body>
+  <main class="nf4-wrap-8k2m9p">
+    <div class="nf4-card-3v7c1q">
+      <p class="nf4-kicker-4n1d8b">404</p>
+      <h1>This room does not exist</h1>
+      <p>We could not find that page. Check the address and try again.</p>
+      <p class="nf4-note-6s9f2l">Practice-only site. 18+ only.</p>
+    </div>
+  </main>
+
+  <div class="nf4-cookie-7q3m8t" data-cookie-banner role="dialog" aria-live="polite" aria-label="Cookie consent" hidden>
+    <div class="nf4-cookiein-5j1c6r">
+      <p>We use a small cookie to remember your choice and keep the site steady.</p>
+      <div class="nf4-cookieactions-9p4d7h">
+        <button type="button" data-cookie-accept>Accept</button>
+        <button type="button" data-cookie-decline>Decline</button>
+      </div>
+    </div>
+  </div>
+
+  <script>
+    // Simple page interaction: cookie consent banner.
+    (() => {
+      // Cookie banner: remember the choice in localStorage.
+      const banner = document.querySelector("[data-cookie-banner]");
+      const acceptBtn = document.querySelector("[data-cookie-accept]");
+      const declineBtn = document.querySelector("[data-cookie-decline]");
+      if (banner) {
+        const choice = localStorage.getItem("snp_cookie_choice");
+        if (choice) {
+          banner.setAttribute("hidden", "");
+        } else {
+          banner.removeAttribute("hidden");
+        }
+        const setChoice = (value) => {
+          localStorage.setItem("snp_cookie_choice", value);
+          banner.setAttribute("hidden", "");
+        };
+        if (acceptBtn) acceptBtn.addEventListener("click", () => setChoice("accepted"));
+        if (declineBtn) declineBtn.addEventListener("click", () => setChoice("declined"));
+      }
+    })();
+  </script>
+</body>
+</html>

@@ -1,0 +1,729 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Suominettipelit | Play</title>
+  <meta name="description" content="Open the Suominettipelit practice room, reroll the game pick, and play in practice mode only.">
+  <link rel="icon" href="favicon.ico">
+  <style>
+
+    @font-face {
+      font-family: "Happy Vibes";
+      src: url("happy-vibes-happy-vibes-svg-400.otf") format("opentype");
+      font-weight: 400;
+      font-style: normal;
+      font-display: swap;
+    }
+    @font-face {
+      font-family: "Happy Vibes Outline";
+      src: url("happy-vibes-happy-vibes-outline-svg-400.otf") format("opentype");
+      font-weight: 400;
+      font-style: normal;
+      font-display: swap;
+    }
+    :root {
+      --bg: #f6f1e7;
+      --ink: #1c1a15;
+      --muted: #6a5f52;
+      --accent: #e55a3d;
+      --accent-dark: #c2472e;
+      --teal: #0f818a;
+      --gold: #f2c94c;
+      --card: #fff7ef;
+      --line: #e7d7c7;
+      --shadow: 0 18px 40px rgba(20, 16, 10, 0.12);
+      --radius: 20px;
+      --maxw: 1120px;
+    }
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+    body {
+      font-family: "Palatino Linotype", "Book Antiqua", Palatino, serif;
+      color: var(--ink);
+      background: radial-gradient(circle at top, #fff5e6 0%, #f6f1e7 55%, #f0e5d8 100%);
+      min-height: 100vh;
+      line-height: 1.6;
+      position: relative;
+    }
+    body::before,
+    body::after {
+      content: "";
+      position: fixed;
+      inset: 0;
+      pointer-events: none;
+      z-index: -1;
+      background:
+        radial-gradient(240px 240px at 10% 20%, rgba(15, 129, 138, 0.16), transparent 70%),
+        radial-gradient(260px 260px at 90% 10%, rgba(242, 201, 76, 0.2), transparent 72%),
+        radial-gradient(300px 300px at 90% 80%, rgba(229, 90, 61, 0.12), transparent 75%);
+    }
+    h1, h2, h3 {
+      font-family: "Happy Vibes", "Trebuchet MS", "Lucida Sans Unicode", "Lucida Grande", sans-serif;
+      letter-spacing: 0.2px;
+      line-height: 1.2;
+    }
+    a { color: inherit; text-decoration: none; }
+    img { max-width: 100%; display: block; }
+    button {
+      font-family: inherit;
+      border: none;
+      background: none;
+      cursor: pointer;
+    }
+    a:focus-visible,
+    button:focus-visible,
+    input:focus-visible,
+    textarea:focus-visible {
+      outline: 2px solid var(--teal);
+      outline-offset: 2px;
+    }
+
+    .ply-header-3a6f9m {
+      position: sticky;
+      top: 0;
+      z-index: 20;
+      background: rgba(246, 241, 231, 0.9);
+      border-bottom: 1px solid var(--line);
+      backdrop-filter: blur(6px);
+    }
+    .ply-headin-0q7w2e,
+    .ply-hero-6s2d9p,
+    .ply-benefits-6q1v7m,
+    .ply-featured-8u2r5d,
+    .ply-stats-4x9k0p,
+    .ply-steps-7g1s4l,
+    .ply-footin-0z6n8d {
+      max-width: var(--maxw);
+      margin: 0 auto;
+      padding: 0 20px;
+    }
+    .ply-headin-0q7w2e {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 16px;
+      padding: 16px 20px;
+    }
+    .ply-brand-8t4j1c {
+      display: inline-flex;
+      align-items: center;
+      gap: 10px;
+      font-family: "Happy Vibes Outline", "Happy Vibes", "Trebuchet MS", "Lucida Sans Unicode", "Lucida Grande", sans-serif;
+      font-weight: 400;
+      font-size: 1.1rem;
+    }
+    .ply-brand-8t4j1c svg {
+      width: 34px;
+      height: 34px;
+    }
+    .ply-nav-5n8s0d ul {
+      list-style: none;
+      display: flex;
+      gap: 16px;
+      flex-wrap: wrap;
+      font-size: 0.95rem;
+    }
+    .ply-nav-5n8s0d a {
+      padding: 6px 8px;
+      border-radius: 999px;
+    }
+    .ply-nav-5n8s0d a:hover {
+      background: #f2e5d8;
+    }
+    .ply-cta-9v2c6a {
+      background: var(--accent);
+      color: #fff;
+      padding: 10px 18px;
+      border-radius: 999px;
+      font-weight: 700;
+      box-shadow: 0 8px 20px rgba(229, 90, 61, 0.25);
+    }
+    .ply-cta-9v2c6a:hover { background: var(--accent-dark); }
+
+    .ply-main-1k6p0x { padding: 28px 0 80px; }
+
+    .ply-hero-6s2d9p { padding: 36px 20px 20px; }
+    .ply-herogrid-4m1z8b {
+      display: grid;
+      gap: 28px;
+      align-items: center;
+    }
+    .ply-herokicker-5d7k2m {
+      text-transform: uppercase;
+      font-size: 0.78rem;
+      letter-spacing: 2px;
+      color: var(--teal);
+      font-weight: 700;
+      margin-bottom: 12px;
+    }
+    .ply-hero-6s2d9p h1 {
+      font-size: clamp(2.2rem, 3.2vw, 3.3rem);
+      margin-bottom: 12px;
+    }
+    .ply-hero-6s2d9p p {
+      color: var(--muted);
+      font-size: 1.05rem;
+      margin-bottom: 16px;
+      max-width: 540px;
+    }
+    .ply-heroact-8e9t1u {
+      display: flex;
+      gap: 12px;
+      flex-wrap: wrap;
+      margin: 18px 0;
+    }
+    .ply-heroact-8e9t1u a {
+      padding: 12px 18px;
+      border-radius: 999px;
+      font-weight: 700;
+      border: 1px solid transparent;
+      background: var(--teal);
+      color: #fff;
+      box-shadow: 0 12px 24px rgba(15, 129, 138, 0.2);
+    }
+    .ply-heroact-8e9t1u a:last-child {
+      background: transparent;
+      color: var(--teal);
+      border-color: var(--teal);
+      box-shadow: none;
+    }
+    .ply-heronote-7c3r2f {
+      font-size: 0.9rem;
+      color: var(--muted);
+      border-left: 3px solid var(--gold);
+      padding-left: 10px;
+    }
+    .ply-heroviz-2w6n0q {
+      position: relative;
+      min-height: 280px;
+      border-radius: var(--radius);
+      background: linear-gradient(135deg, rgba(15, 129, 138, 0.12), rgba(229, 90, 61, 0.12));
+      overflow: hidden;
+      padding: 26px;
+      box-shadow: var(--shadow);
+    }
+    .ply-herobubble-1d9f3k {
+      position: absolute;
+      inset: 20px 40px auto auto;
+      width: 140px;
+      height: 140px;
+      border-radius: 50%;
+      background: radial-gradient(circle, rgba(242, 201, 76, 0.7), rgba(242, 201, 76, 0));
+      filter: blur(2px);
+    }
+    .ply-herostack-0h2l9s {
+      display: grid;
+      gap: 16px;
+      position: relative;
+      z-index: 1;
+    }
+    .ply-herocard1-5r8a1n,
+    .ply-herocard2-9p4b7v {
+      background: var(--card);
+      border-radius: 16px;
+      padding: 16px 18px;
+      border: 1px solid rgba(231, 215, 199, 0.9);
+    }
+    .ply-herocard1-5r8a1n h3,
+    .ply-herocard2-9p4b7v h3 {
+      margin-bottom: 6px;
+    }
+
+    .ply-benefits-6q1v7m { padding: 36px 20px; }
+    .ply-benefits-6q1v7m h2 { margin-bottom: 18px; }
+    .ply-benefitgrid-3t6c1j {
+      display: grid;
+      gap: 16px;
+    }
+    .ply-benefitgrid-3t6c1j article {
+      background: #fff;
+      border-radius: 18px;
+      padding: 18px;
+      border: 1px solid var(--line);
+      box-shadow: 0 8px 20px rgba(20, 16, 10, 0.06);
+    }
+
+    .ply-featured-8u2r5d { padding: 36px 20px; }
+    .ply-featuredhead-2f7n1x {
+      display: flex;
+      flex-direction: column;
+      gap: 6px;
+      margin-bottom: 18px;
+    }
+    .ply-featuredgrid-1b6m8s {
+      display: grid;
+      gap: 24px;
+      justify-items: center;
+    }
+    .ply-playinfo-4c9d7h,
+    .ply-playframe-1f6k3z {
+      background: #fff;
+      border-radius: 20px;
+      padding: 18px;
+      border: 1px solid var(--line);
+      display: grid;
+      gap: 12px;
+      box-shadow: 0 10px 24px rgba(20, 16, 10, 0.08);
+      width: 100%;
+    }
+    .ply-playinfo-4c9d7h { max-width: 720px; }
+    .ply-playframe-1f6k3z { max-width: 1120px; }
+    .ply-playinfo-4c9d7h img {
+      border-radius: 14px;
+      border: 1px solid var(--line);
+      height: 220px;
+      object-fit: cover;
+    }
+    .ply-playactions-7p1n6q {
+      display: flex;
+      gap: 10px;
+      flex-wrap: wrap;
+      justify-content: center;
+    }
+    .ply-playactions-7p1n6q button {
+      background: var(--teal);
+      color: #fff;
+      padding: 10px 16px;
+      border-radius: 999px;
+      font-weight: 700;
+    }
+    .ply-mode-banner-6c3t9p {
+      background: rgba(229, 90, 61, 0.12);
+      border-radius: 12px;
+      padding: 10px 12px;
+      font-weight: 700;
+      text-align: center;
+    }
+    .ply-playframe-1f6k3z iframe {
+      width: 100%;
+      min-height: 700px;
+      height: 70vh;
+      max-height: 860px;
+      border: 0;
+      border-radius: 12px;
+      background: #000;
+    }
+    .ply-age-note-2v7m8c {
+      font-size: 0.9rem;
+      color: var(--muted);
+      border-left: 3px solid var(--gold);
+      padding-left: 10px;
+      justify-self: center;
+    }
+
+    .ply-stats-4x9k0p {
+      padding: 26px 20px;
+      margin: 10px 0 30px;
+    }
+    .ply-statsgrid-9y2w6h {
+      display: grid;
+      gap: 12px;
+      background: #fff;
+      border-radius: var(--radius);
+      border: 1px solid var(--line);
+      padding: 18px;
+      box-shadow: 0 10px 24px rgba(20, 16, 10, 0.08);
+    }
+    .ply-statsgrid-9y2w6h div {
+      display: grid;
+      gap: 4px;
+      text-align: center;
+    }
+    .ply-statsgrid-9y2w6h span {
+      font-size: 1.8rem;
+      font-weight: 700;
+      color: var(--teal);
+    }
+
+    .ply-steps-7g1s4l { padding: 36px 20px; }
+    .ply-steps-7g1s4l h2 { margin-bottom: 18px; }
+    .ply-stepsgrid-2q8e0a {
+      display: grid;
+      gap: 16px;
+    }
+    .ply-stepsgrid-2q8e0a article {
+      background: #fff;
+      border-radius: 18px;
+      padding: 18px;
+      border: 1px solid var(--line);
+      position: relative;
+    }
+    .ply-stepsgrid-2q8e0a article::before {
+      content: "";
+      position: absolute;
+      width: 26px;
+      height: 26px;
+      border-radius: 50%;
+      background: var(--gold);
+      top: 18px;
+      right: 18px;
+      opacity: 0.7;
+    }
+
+    .ply-footer-5m3c7r {
+      background: #f3e8dc;
+      border-top: 1px solid var(--line);
+      padding: 40px 0 60px;
+    }
+    .ply-footin-0z6n8d {
+      display: grid;
+      gap: 24px;
+    }
+    .ply-footbrand-7u9p2c {
+      display: grid;
+      gap: 8px;
+      max-width: 420px;
+    }
+    .ply-footcols-1r5k8g {
+      display: grid;
+      gap: 16px;
+    }
+    .ply-footcols-1r5k8g ul { list-style: none; display: grid; gap: 6px; }
+    .ply-newswrap-2m9t4b {
+      background: #fff;
+      border-radius: var(--radius);
+      padding: 18px;
+      border: 1px solid var(--line);
+      box-shadow: 0 8px 18px rgba(20, 16, 10, 0.06);
+    }
+    .ply-newswrap-2m9t4b h3 { margin-bottom: 8px; }
+    .ply-newsform-6e2v0y {
+      display: grid;
+      gap: 12px;
+    }
+    .ply-newsfields-9q1x5d {
+      display: grid;
+      gap: 12px;
+    }
+    .ply-newsfields-9q1x5d label {
+      display: grid;
+      gap: 6px;
+      font-size: 0.95rem;
+      color: var(--muted);
+    }
+    .ply-newsfields-9q1x5d input {
+      padding: 10px 12px;
+      border-radius: 12px;
+      border: 1px solid var(--line);
+      background: #fff;
+    }
+    .ply-newsform-6e2v0y button {
+      justify-self: start;
+      background: var(--teal);
+      color: #fff;
+      padding: 10px 16px;
+      border-radius: 999px;
+      font-weight: 700;
+    }
+    .ply-newssuccess-4n7c1p {
+      background: rgba(15, 129, 138, 0.12);
+      border-radius: 14px;
+      padding: 12px;
+      color: var(--ink);
+    }
+    .ply-footnote-8j3l6t {
+      color: var(--muted);
+      font-size: 0.9rem;
+      border-left: 3px solid var(--accent);
+      padding-left: 10px;
+    }
+
+    .ply-cookie-3p8v1z {
+      position: fixed;
+      inset: auto 16px 16px 16px;
+      background: #fff;
+      border-radius: 16px;
+      border: 1px solid var(--line);
+      box-shadow: var(--shadow);
+      z-index: 30;
+    }
+    .ply-cookiein-2c7m0k {
+      display: grid;
+      gap: 12px;
+      padding: 16px;
+      color: var(--muted);
+    }
+    .ply-cookieactions-6t4r9n {
+      display: flex;
+      gap: 10px;
+      flex-wrap: wrap;
+    }
+    .ply-cookieactions-6t4r9n button {
+      padding: 8px 14px;
+      border-radius: 999px;
+      font-weight: 700;
+      border: 1px solid var(--teal);
+      color: var(--teal);
+      background: transparent;
+    }
+    .ply-cookieactions-6t4r9n button:first-child {
+      background: var(--teal);
+      color: #fff;
+    }
+
+    @media (min-width: 820px) {
+      .ply-herogrid-4m1z8b { grid-template-columns: 1.1fr 0.9fr; }
+      .ply-benefitgrid-3t6c1j { grid-template-columns: repeat(4, 1fr); }
+      .ply-featuredgrid-1b6m8s { grid-template-columns: 1fr; }
+      .ply-statsgrid-9y2w6h { grid-template-columns: repeat(3, 1fr); }
+      .ply-stepsgrid-2q8e0a { grid-template-columns: repeat(3, 1fr); }
+      .ply-footin-0z6n8d { grid-template-columns: 1.1fr 1fr 1fr; align-items: start; }
+      .ply-footcols-1r5k8g { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+    }
+
+    @media (prefers-reduced-motion: reduce) {
+      * { animation: none !important; transition: none !important; }
+    }
+
+    .ply-hero-6s2d9p,
+    .ply-benefits-6q1v7m,
+    .ply-featured-8u2r5d,
+    .ply-stats-4x9k0p,
+    .ply-steps-7g1s4l {
+      animation: fadeUp 0.8s ease both;
+    }
+    .ply-featuredgrid-1b6m8s > div {
+      animation: floatIn 0.7s ease both;
+    }
+    .ply-featuredgrid-1b6m8s > div:nth-child(2) { animation-delay: 0.1s; }
+
+    @keyframes fadeUp {
+      from { opacity: 0; transform: translateY(16px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
+    @keyframes floatIn {
+      from { opacity: 0; transform: translateY(20px) scale(0.98); }
+      to { opacity: 1; transform: translateY(0) scale(1); }
+    }
+  </style>
+</head>
+<body>
+  <header class="ply-header-3a6f9m">
+    <div class="ply-headin-0q7w2e">
+      <a class="ply-brand-8t4j1c" href="index.html" aria-label="Suominettipelit home">
+        <svg viewBox="0 0 48 48" role="img" aria-hidden="true">
+          <defs>
+            <linearGradient id="ply-logo-grad" x1="0" y1="0" x2="1" y2="1">
+              <stop offset="0" stop-color="#0f818a"/>
+              <stop offset="1" stop-color="#e55a3d"/>
+            </linearGradient>
+          </defs>
+          <circle cx="24" cy="24" r="20" fill="url(#ply-logo-grad)" opacity="0.9"/>
+          <path d="M15 30c3-8 7-12 9-12s6 4 9 12" fill="none" stroke="#fff" stroke-width="3" stroke-linecap="round"/>
+        </svg>
+        <span>Suominettipelit</span>
+      </a>
+      <nav class="ply-nav-5n8s0d" aria-label="Primary">
+        <ul>
+          <li><a href="index.html">Home</a></li>
+          <li><a href="games.html">Games</a></li><li><a href="about.html">About</a></li>
+          <li><a href="contact.html">Contact</a></li>
+          <li><a href="terms.html">Terms</a></li>
+          <li><a href="policy.html">Privacy</a></li>
+        </ul>
+      </nav>
+      <a class="ply-cta-9v2c6a" href="games.html">View room</a>
+    </div>
+  </header>
+
+    <main class="ply-main-1k6p0x">
+    <section class="ply-hero-6s2d9p">
+      <div class="ply-herogrid-4m1z8b">
+        <div>
+          <p class="ply-herokicker-5d7k2m">Practice lounge</p>
+          <h1>Settle in for a practice spin.</h1>
+          <p>This is a practice-only experience. No real money or prizes, just a calm place to play.</p>
+          <p>It is a free-to-play social casino room built for casual breaks.</p>
+          <p>I usually set a tiny goal, like ten spins, just to keep it light.</p>
+          <p>If the room is not your thing, the reroll button below gives you a fresh pick without reloading.</p>
+          <div class="ply-heroact-8e9t1u">
+            <a href="games.html">View room</a>
+            <a href="about.html">How it stays practice-only</a>
+          </div>
+          <p class="ply-heronote-7c3r2f">18+ only. For entertainment only. No real money, prizes, purchases, or cash-out.</p>
+        </div>
+        <div class="ply-heroviz-2w6n0q">
+          <div class="ply-herobubble-1d9f3k"></div>
+          <div class="ply-herostack-0h2l9s">
+            <div class="ply-herocard1-5r8a1n">
+              <h3 data-game-title>Gold Volcano</h3>
+              <p>Warm palette, glowing lines, steady rhythm.</p>
+            </div>
+            <div class="ply-herocard2-9p4b7v">
+              <h3>Practice-only play</h3>
+              <p>For entertainment only. No real money, prizes, purchases, or cash-out.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="ply-featured-8u2r5d">
+      <div class="ply-featuredhead-2f7n1x">
+        <h2>Play room</h2>
+        <p>Practice only. If the embed does not load, try another pick or refresh.</p>
+        <p>The title above updates with each pick so you always know what is loading.</p>
+      </div>
+      <div class="ply-featuredgrid-1b6m8s">
+        <div class="ply-playinfo-4c9d7h">
+          <img src="volcano.png" alt="Gold Volcano preview">
+          <h3 data-game-title>Gold Volcano</h3>
+          <p>Molten glow and a steady rhythm, tuned for practice play.</p>
+          <p>Give it a few seconds to load. It is the full practice game running inside the frame.</p>
+          <div class="ply-playactions-7p1n6q">
+            <button type="button" data-game-reroll>Pick another game</button>
+          </div>
+          <p class="ply-age-note-2v7m8c">18+ only. Practice play only, for entertainment.</p>
+        </div>
+        <div class="ply-playframe-1f6k3z">
+          <p class="ply-mode-banner-6c3t9p">Practice mode only. No real money, no prizes.</p>
+          <iframe data-game-frame title="Gold Volcano practice play" loading="lazy" allowfullscreen src="https://asccw.playngonetwork.com/casino/ContainerLauncher?pid=2&gid=goldvolcano&lang=en_GB&practice=1&channel=desktop&demo=2"></iframe>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="ply-footer-5m3c7r">
+    <div class="ply-footin-0z6n8d">
+      <div class="ply-footbrand-7u9p2c">
+        <h3>Suominettipelit</h3>
+        <p>A small practice lounge inspired by Nordic light and the glow of arcades.</p>
+      </div>
+      <div class="ply-footcols-1r5k8g">
+        <div>
+          <h3>Explore</h3>
+          <ul>
+            <li><a href="games.html">Games</a></li>
+            <li><a href="contact.html">Contact</a></li>
+            <li><a href="about.html">About</a></li>
+          </ul>
+        </div>
+        <div>
+          <h3>Support</h3>
+          <ul>
+            <li><a href="contact.html">Contact</a></li>
+            <li><a href="terms.html">Terms</a></li>
+            <li><a href="policy.html">Privacy</a></li>
+          </ul>
+        </div>
+      </div>
+      <div class="ply-newswrap-2m9t4b">
+        <h3>Get a short monthly note</h3>
+        <p>Occasional updates about new rooms, playlists, and ways to keep play relaxed.</p>
+        <form class="ply-newsform-6e2v0y" data-newsletter-form>
+          <div class="ply-newsfields-9q1x5d" data-newsletter-fields>
+            <label>
+              Name
+              <input type="text" name="name" autocomplete="name" required>
+            </label>
+            <label>
+              Email
+              <input type="email" name="email" autocomplete="email" required>
+            </label>
+            <button type="submit">Join the list</button>
+          </div>
+          <div class="ply-newssuccess-4n7c1p" data-newsletter-success hidden aria-live="polite">
+            Thanks for signing up. We will send a brief update soon.
+          </div>
+        </form>
+      </div>
+      <p class="ply-footnote-8j3l6t">18+ only. For entertainment only. No real money, prizes, purchases, or cash-out. Take breaks and play responsibly.</p>
+    </div>
+  </footer>
+
+  <div class="ply-cookie-3p8v1z" data-cookie-banner role="dialog" aria-live="polite" aria-label="Cookie consent" hidden>
+    <div class="ply-cookiein-2c7m0k">
+      <p>We use a small cookie to remember your choice and keep the site steady.</p>
+      <div class="ply-cookieactions-6t4r9n">
+        <button type="button" data-cookie-accept>Accept</button>
+        <button type="button" data-cookie-decline>Decline</button>
+      </div>
+    </div>
+  </div>
+
+  <script>
+    // Page interactions: cookie consent, newsletter feedback, and game loading.
+    (() => {
+      // Cookie banner: remember the choice in localStorage.
+      const banner = document.querySelector("[data-cookie-banner]");
+      const acceptBtn = document.querySelector("[data-cookie-accept]");
+      const declineBtn = document.querySelector("[data-cookie-decline]");
+      if (banner) {
+        const choice = localStorage.getItem("snp_cookie_choice");
+        if (choice) {
+          banner.setAttribute("hidden", "");
+        } else {
+          banner.removeAttribute("hidden");
+        }
+        const setChoice = (value) => {
+          localStorage.setItem("snp_cookie_choice", value);
+          banner.setAttribute("hidden", "");
+        };
+        if (acceptBtn) acceptBtn.addEventListener("click", () => setChoice("accepted"));
+        if (declineBtn) declineBtn.addEventListener("click", () => setChoice("declined"));
+      }
+
+      // Newsletter form: swap fields for a success message.
+      const form = document.querySelector("[data-newsletter-form]");
+      const fields = document.querySelector("[data-newsletter-fields]");
+      const success = document.querySelector("[data-newsletter-success]");
+      if (form && fields && success) {
+        form.addEventListener("submit", (event) => {
+          event.preventDefault();
+          fields.setAttribute("hidden", "");
+          success.removeAttribute("hidden");
+          form.reset();
+        });
+      }
+
+      // Game loader: read the query param or pick a room.
+      const games = [
+        {
+          id: "goldvolcano",
+          name: "Gold Volcano",
+          url: "https://asccw.playngonetwork.com/casino/ContainerLauncher?pid=2&gid=goldvolcano&lang=en_GB&practice=1&channel=desktop&demo=2"
+        }
+      ];
+
+      const titleEls = document.querySelectorAll("[data-game-title]");
+      const frame = document.querySelector("[data-game-frame]");
+      const reroll = document.querySelector("[data-game-reroll]");
+      const pageUrl = new URL(window.location.href);
+      const requested = pageUrl.searchParams.get("game");
+      let current = games.find((game) => game.id === requested) || games[Math.floor(Math.random() * games.length)];
+
+      // Apply the selected room to titles, iframe, and URL.
+      const applyGame = (game) => {
+        titleEls.forEach((el) => {
+          el.textContent = game.name;
+        });
+        if (frame) {
+          frame.src = game.url;
+          frame.title = game.name + " practice play";
+        }
+        pageUrl.searchParams.set("game", game.id);
+        window.history.replaceState({}, "", pageUrl);
+      };
+
+      if (current) applyGame(current);
+      // Reroll: swap the room without reloading the page.
+      if (reroll) {
+        reroll.addEventListener("click", () => {
+          let next = games[Math.floor(Math.random() * games.length)];
+          if (games.length > 1) {
+            while (next.id === current.id) {
+              next = games[Math.floor(Math.random() * games.length)];
+            }
+          }
+          current = next;
+          applyGame(current);
+        });
+      }
+    })();
+  </script>
+</body>
+</html>
+
+
+
+

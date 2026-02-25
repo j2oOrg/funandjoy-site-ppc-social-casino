@@ -1,21 +1,21 @@
 apiVersion: apps/v1
 kind: Deployment
 metadata:
-  name: suominettipelit-games-ppc-social
+  name: funandjoy-site-ppc-social
   labels:
-    app: suominettipelit-games-ppc-social
+    app: funandjoy-site-ppc-social
 spec:
   replicas: 1
   selector:
     matchLabels:
-      app: suominettipelit-games-ppc-social
+      app: funandjoy-site-ppc-social
   template:
     metadata:
       labels:
-        app: suominettipelit-games-ppc-social
+        app: funandjoy-site-ppc-social
     spec:
       containers:
-        - name: suominettipelit-games-ppc-social
+        - name: funandjoy-site-ppc-social
           image: IMAGE_PLACEHOLDER
           ports:
             - containerPort: 80
@@ -23,13 +23,13 @@ spec:
 apiVersion: v1
 kind: Service
 metadata:
-  name: suominettipelit-games-ppc-social
+  name: funandjoy-site-ppc-social
   labels:
-    app: suominettipelit-games-ppc-social
+    app: funandjoy-site-ppc-social
 spec:
   type: LoadBalancer
   selector:
-    app: suominettipelit-games-ppc-social
+    app: funandjoy-site-ppc-social
   ports:
     - name: http
       protocol: TCP

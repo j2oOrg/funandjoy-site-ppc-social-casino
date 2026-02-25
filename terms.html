@@ -7,22 +7,7 @@
   <meta name="description" content="Read the Suominettipelit Terms of Use for this practice-only entertainment site.">
   <link rel="icon" href="favicon.ico">
   <style>
-
-    @font-face {
-      font-family: "Happy Vibes";
-      src: url("happy-vibes-happy-vibes-svg-400.otf") format("opentype");
-      font-weight: 400;
-      font-style: normal;
-      font-display: swap;
-    }
-    @font-face {
-      font-family: "Happy Vibes Outline";
-      src: url("happy-vibes-happy-vibes-outline-svg-400.otf") format("opentype");
-      font-weight: 400;
-      font-style: normal;
-      font-display: swap;
-    }
-    :root {
+:root{
       --bg: #f6f1e7;
       --ink: #1c1a15;
       --muted: #6a5f52;
@@ -36,8 +21,8 @@
       --radius: 20px;
       --maxw: 1120px;
     }
-    * { box-sizing: border-box; margin: 0; padding: 0; }
-    body {
+    *{ box-sizing: border-box; margin: 0; padding: 0; }
+    body{
       font-family: "Palatino Linotype", "Book Antiqua", Palatino, serif;
       color: var(--ink);
       background: radial-gradient(circle at top, #fff5e6 0%, #f6f1e7 55%, #f0e5d8 100%);
@@ -45,8 +30,7 @@
       line-height: 1.6;
       position: relative;
     }
-    body::before,
-    body::after {
+    body::before, body::after{
       content: "";
       position: fixed;
       inset: 0;
@@ -57,28 +41,25 @@
         radial-gradient(260px 260px at 90% 10%, rgba(242, 201, 76, 0.2), transparent 72%),
         radial-gradient(300px 300px at 90% 80%, rgba(229, 90, 61, 0.12), transparent 75%);
     }
-    h1, h2, h3 {
+    h1, h2, h3{
       font-family: "Happy Vibes", "Trebuchet MS", "Lucida Sans Unicode", "Lucida Grande", sans-serif;
       letter-spacing: 0.2px;
       line-height: 1.2;
     }
-    a { color: inherit; text-decoration: none; }
-    img { max-width: 100%; display: block; }
-    button {
+    a{ color: inherit; text-decoration: none; }
+    img{ max-width: 100%; display: block; }
+    button{
       font-family: inherit;
       border: none;
       background: none;
       cursor: pointer;
     }
-    a:focus-visible,
-    button:focus-visible,
-    input:focus-visible,
-    textarea:focus-visible {
+    a:focus-visible, button:focus-visible, input:focus-visible, textarea:focus-visible{
       outline: 2px solid var(--teal);
       outline-offset: 2px;
     }
 
-    .trm-header-3a6f9m {
+    .trm-header{
       position: sticky;
       top: 0;
       z-index: 20;
@@ -86,25 +67,19 @@
       border-bottom: 1px solid var(--line);
       backdrop-filter: blur(6px);
     }
-    .trm-headin-0q7w2e,
-    .trm-hero-6s2d9p,
-    .trm-benefits-6q1v7m,
-    .trm-featured-8u2r5d,
-    .trm-stats-4x9k0p,
-    .trm-steps-7g1s4l,
-    .trm-footin-0z6n8d {
+    .trm-headin, .trm-hero, .trm-featured, .trm-footin{
       max-width: var(--maxw);
       margin: 0 auto;
       padding: 0 20px;
     }
-    .trm-headin-0q7w2e {
+    .trm-headin{
       display: flex;
       align-items: center;
       justify-content: space-between;
       gap: 16px;
       padding: 16px 20px;
     }
-    .trm-brand-8t4j1c {
+    .trm-brand{
       display: inline-flex;
       align-items: center;
       gap: 10px;
@@ -112,43 +87,34 @@
       font-weight: 400;
       font-size: 1.1rem;
     }
-    .trm-brand-8t4j1c svg {
+    .trm-brand svg{
       width: 34px;
       height: 34px;
     }
-    .trm-nav-5n8s0d ul {
+    .trm-nav ul{
       list-style: none;
       display: flex;
       gap: 16px;
       flex-wrap: wrap;
       font-size: 0.95rem;
     }
-    .trm-nav-5n8s0d a {
+    .trm-nav a{
       padding: 6px 8px;
       border-radius: 999px;
     }
-    .trm-nav-5n8s0d a:hover {
+    .trm-nav a:hover{
       background: #f2e5d8;
     }
-    .trm-cta-9v2c6a {
-      background: var(--accent);
-      color: #fff;
-      padding: 10px 18px;
-      border-radius: 999px;
-      font-weight: 700;
-      box-shadow: 0 8px 20px rgba(229, 90, 61, 0.25);
-    }
-    .trm-cta-9v2c6a:hover { background: var(--accent-dark); }
 
-    .trm-main-1k6p0x { padding: 28px 0 80px; }
+    .trm-main{ padding: 28px 0 80px; }
 
-    .trm-hero-6s2d9p { padding: 36px 20px 20px; }
-    .trm-herogrid-4m1z8b {
+    .trm-hero{ padding: 36px 20px 20px; }
+    .trm-herogrid{
       display: grid;
       gap: 28px;
       align-items: center;
     }
-    .trm-herokicker-5d7k2m {
+    .trm-herokicker{
       text-transform: uppercase;
       font-size: 0.78rem;
       letter-spacing: 2px;
@@ -156,23 +122,23 @@
       font-weight: 700;
       margin-bottom: 12px;
     }
-    .trm-hero-6s2d9p h1 {
+    .trm-hero h1{
       font-size: clamp(2.2rem, 3.2vw, 3.3rem);
       margin-bottom: 12px;
     }
-    .trm-hero-6s2d9p p {
+    .trm-hero p{
       color: var(--muted);
       font-size: 1.05rem;
       margin-bottom: 16px;
       max-width: 540px;
     }
-    .trm-heroact-8e9t1u {
+    .trm-heroact{
       display: flex;
       gap: 12px;
       flex-wrap: wrap;
       margin: 18px 0;
     }
-    .trm-heroact-8e9t1u a {
+    .trm-heroact a{
       padding: 12px 18px;
       border-radius: 999px;
       font-weight: 700;
@@ -181,19 +147,19 @@
       color: #fff;
       box-shadow: 0 12px 24px rgba(15, 129, 138, 0.2);
     }
-    .trm-heroact-8e9t1u a:last-child {
+    .trm-heroact a:last-child{
       background: transparent;
       color: var(--teal);
       border-color: var(--teal);
       box-shadow: none;
     }
-    .trm-heronote-7c3r2f {
+    .trm-heronote{
       font-size: 0.9rem;
       color: var(--muted);
       border-left: 3px solid var(--gold);
       padding-left: 10px;
     }
-    .trm-heroviz-2w6n0q {
+    .trm-heroviz{
       position: relative;
       min-height: 280px;
       border-radius: var(--radius);
@@ -202,213 +168,76 @@
       padding: 26px;
       box-shadow: var(--shadow);
     }
-    .trm-herobubble-1d9f3k {
-      position: absolute;
-      inset: 20px 40px auto auto;
-      width: 140px;
-      height: 140px;
-      border-radius: 50%;
-      background: radial-gradient(circle, rgba(242, 201, 76, 0.7), rgba(242, 201, 76, 0));
-      filter: blur(2px);
-    }
-    .trm-herostack-0h2l9s {
+    .trm-herostack{
       display: grid;
       gap: 16px;
       position: relative;
       z-index: 1;
     }
-    .trm-herocard1-5r8a1n,
-    .trm-herocard2-9p4b7v {
+    .trm-herocard1, .trm-herocard2{
       background: var(--card);
       border-radius: 16px;
       padding: 16px 18px;
       border: 1px solid rgba(231, 215, 199, 0.9);
     }
-    .trm-herocard1-5r8a1n h3,
-    .trm-herocard2-9p4b7v h3 {
+    .trm-herocard1 h3, .trm-herocard2 h3{
       margin-bottom: 6px;
     }
 
-    .trm-benefits-6q1v7m { padding: 36px 20px; }
-    .trm-benefits-6q1v7m h2 { margin-bottom: 18px; }
-    .trm-benefitgrid-3t6c1j {
-      display: grid;
-      gap: 16px;
-    }
-    .trm-benefitgrid-3t6c1j article {
-      background: #fff;
-      border-radius: 18px;
-      padding: 18px;
-      border: 1px solid var(--line);
-      box-shadow: 0 8px 20px rgba(20, 16, 10, 0.06);
-    }
-
-    .trm-featured-8u2r5d { padding: 36px 20px; }
-    .trm-featuredhead-2f7n1x {
+    .trm-featured{ padding: 36px 20px; }
+    .trm-featuredhead{
       display: flex;
       flex-direction: column;
       gap: 6px;
       margin-bottom: 18px;
     }
-    .trm-termsbox-2s6m9v {
+    .trm-termsbox{
       background: #fff;
       border-radius: 20px;
       padding: 20px;
       border: 1px solid var(--line);
       box-shadow: 0 10px 24px rgba(20, 16, 10, 0.08);
     }
-    .trm-termslist-1k4p7d {
+    .trm-termslist{
       list-style: decimal;
       padding-left: 20px;
       display: grid;
       gap: 16px;
     }
-    .trm-termslist-1k4p7d li {
+    .trm-termslist li{
       display: grid;
       gap: 6px;
       color: var(--muted);
     }
-    .trm-termslist-1k4p7d h3 { color: var(--ink); }
-    .trm-featuredgrid-1b6m8s {
-      display: grid;
-      gap: 18px;
-    }
-    .trm-featuredgrid-1b6m8s article {
-      background: var(--card);
-      border-radius: 20px;
-      padding: 18px;
-      border: 1px solid var(--line);
-      display: grid;
-      gap: 10px;
-    }
-    .trm-featuredgrid-1b6m8s svg { width: 100%; height: 120px; }
-    .trm-featuredgrid-1b6m8s a {
-      justify-self: start;
-      background: var(--accent);
-      color: #fff;
-      padding: 8px 14px;
-      border-radius: 999px;
-      font-weight: 700;
-    }
+    .trm-termslist h3{ color: var(--ink); }
 
-    .trm-stats-4x9k0p {
-      padding: 26px 20px;
-      margin: 10px 0 30px;
-    }
-    .trm-statsgrid-9y2w6h {
-      display: grid;
-      gap: 12px;
-      background: #fff;
-      border-radius: var(--radius);
-      border: 1px solid var(--line);
-      padding: 18px;
-      box-shadow: 0 10px 24px rgba(20, 16, 10, 0.08);
-    }
-    .trm-statsgrid-9y2w6h div {
-      display: grid;
-      gap: 4px;
-      text-align: center;
-    }
-    .trm-statsgrid-9y2w6h span {
-      font-size: 1.8rem;
-      font-weight: 700;
-      color: var(--teal);
-    }
-
-    .trm-steps-7g1s4l { padding: 36px 20px; }
-    .trm-steps-7g1s4l h2 { margin-bottom: 18px; }
-    .trm-stepsgrid-2q8e0a {
-      display: grid;
-      gap: 16px;
-    }
-    .trm-stepsgrid-2q8e0a article {
-      background: #fff;
-      border-radius: 18px;
-      padding: 18px;
-      border: 1px solid var(--line);
-      position: relative;
-    }
-    .trm-stepsgrid-2q8e0a article::before {
-      content: "";
-      position: absolute;
-      width: 26px;
-      height: 26px;
-      border-radius: 50%;
-      background: var(--gold);
-      top: 18px;
-      right: 18px;
-      opacity: 0.7;
-    }
-
-    .trm-footer-5m3c7r {
+    .trm-footer{
       background: #f3e8dc;
       border-top: 1px solid var(--line);
       padding: 40px 0 60px;
     }
-    .trm-footin-0z6n8d {
+    .trm-footin{
       display: grid;
       gap: 24px;
     }
-    .trm-footbrand-7u9p2c {
+    .trm-footbrand{
       display: grid;
       gap: 8px;
       max-width: 420px;
     }
-    .trm-footcols-1r5k8g {
+    .trm-footcols{
       display: grid;
       gap: 16px;
     }
-    .trm-footcols-1r5k8g ul { list-style: none; display: grid; gap: 6px; }
-    .trm-newswrap-2m9t4b {
-      background: #fff;
-      border-radius: var(--radius);
-      padding: 18px;
-      border: 1px solid var(--line);
-      box-shadow: 0 8px 18px rgba(20, 16, 10, 0.06);
-    }
-    .trm-newswrap-2m9t4b h3 { margin-bottom: 8px; }
-    .trm-newsform-6e2v0y {
-      display: grid;
-      gap: 12px;
-    }
-    .trm-newsfields-9q1x5d {
-      display: grid;
-      gap: 12px;
-    }
-    .trm-newsfields-9q1x5d label {
-      display: grid;
-      gap: 6px;
-      font-size: 0.95rem;
-      color: var(--muted);
-    }
-    .trm-newsfields-9q1x5d input {
-      padding: 10px 12px;
-      border-radius: 12px;
-      border: 1px solid var(--line);
-      background: #fff;
-    }
-    .trm-newsform-6e2v0y button {
-      justify-self: start;
-      background: var(--teal);
-      color: #fff;
-      padding: 10px 16px;
-      border-radius: 999px;
-      font-weight: 700;
-    }
-    .trm-newssuccess-4n7c1p {
-      background: rgba(15, 129, 138, 0.12);
-      border-radius: 14px;
-      padding: 12px;
-      color: var(--ink);
-    }
-    .trm-footnote-8j3l6t {
+    .trm-footcols ul{ list-style: none; display: grid; gap: 6px; }
+    .trm-footnote{
       color: var(--muted);
       font-size: 0.9rem;
       border-left: 3px solid var(--accent);
       padding-left: 10px;
     }
 
-    .trm-cookie-3p8v1z {
+    .trm-cookie{
       position: fixed;
       inset: auto 16px 16px 16px;
       background: #fff;
@@ -417,18 +246,18 @@
       box-shadow: var(--shadow);
       z-index: 30;
     }
-    .trm-cookiein-2c7m0k {
+    .trm-cookiein{
       display: grid;
       gap: 12px;
       padding: 16px;
       color: var(--muted);
     }
-    .trm-cookieactions-6t4r9n {
+    .trm-cookieactions{
       display: flex;
       gap: 10px;
       flex-wrap: wrap;
     }
-    .trm-cookieactions-6t4r9n button {
+    .trm-cookieactions button{
       padding: 8px 14px;
       border-radius: 999px;
       font-weight: 700;
@@ -436,37 +265,24 @@
       color: var(--teal);
       background: transparent;
     }
-    .trm-cookieactions-6t4r9n button:first-child {
+    .trm-cookieactions button:first-child{
       background: var(--teal);
       color: #fff;
     }
 
     @media (min-width: 820px) {
-      .trm-herogrid-4m1z8b { grid-template-columns: 1.1fr 0.9fr; }
-      .trm-benefitgrid-3t6c1j { grid-template-columns: repeat(4, 1fr); }
-      .trm-featuredgrid-1b6m8s { grid-template-columns: repeat(3, 1fr); }
-      .trm-statsgrid-9y2w6h { grid-template-columns: repeat(3, 1fr); }
-      .trm-stepsgrid-2q8e0a { grid-template-columns: repeat(3, 1fr); }
-      .trm-footin-0z6n8d { grid-template-columns: 1.1fr 1fr 1fr; align-items: start; }
-      .trm-footcols-1r5k8g { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+      .trm-herogrid{ grid-template-columns: 1.1fr 0.9fr; }
+      .trm-footin{ grid-template-columns: 1.1fr 1fr 1fr; align-items: start; }
+      .trm-footcols{ grid-template-columns: repeat(2, minmax(0, 1fr)); }
     }
 
     @media (prefers-reduced-motion: reduce) {
-      * { animation: none !important; transition: none !important; }
+      *{ animation: none !important; transition: none !important; }
     }
 
-    .trm-hero-6s2d9p,
-    .trm-benefits-6q1v7m,
-    .trm-featured-8u2r5d,
-    .trm-stats-4x9k0p,
-    .trm-steps-7g1s4l {
+    .trm-hero, .trm-featured{
       animation: fadeUp 0.8s ease both;
     }
-    .trm-featuredgrid-1b6m8s article {
-      animation: floatIn 0.7s ease both;
-    }
-    .trm-featuredgrid-1b6m8s article:nth-child(2) { animation-delay: 0.1s; }
-    .trm-featuredgrid-1b6m8s article:nth-child(3) { animation-delay: 0.2s; }
 
     @keyframes fadeUp {
       from { opacity: 0; transform: translateY(16px); }
@@ -477,11 +293,12 @@
       to { opacity: 1; transform: translateY(0) scale(1); }
     }
   </style>
+  <link rel="stylesheet" href="assets/moonlight-theme.css">
 </head>
 <body>
-  <header class="trm-header-3a6f9m">
-    <div class="trm-headin-0q7w2e">
-      <a class="trm-brand-8t4j1c" href="index.html" aria-label="Suominettipelit home">
+  <header class="trm-header">
+    <div class="trm-headin">
+      <a class="trm-brand" href="index.html" aria-label="Suominettipelit home">
         <svg viewBox="0 0 48 48" role="img" aria-hidden="true">
           <defs>
             <linearGradient id="trm-logo-grad" x1="0" y1="0" x2="1" y2="1">
@@ -494,7 +311,7 @@
         </svg>
         <span>Suominettipelit</span>
       </a>
-      <nav class="trm-nav-5n8s0d" aria-label="Primary">
+      <nav class="trm-nav" aria-label="Primary">
         <ul>
           <li><a href="index.html">Home</a></li>
           <li><a href="games.html">Games</a></li><li><a href="about.html">About</a></li>
@@ -503,31 +320,29 @@
           <li><a href="policy.html">Privacy</a></li>
         </ul>
       </nav>
-      <a class="trm-cta-9v2c6a" href="games.html">View room</a>
     </div>
   </header>
 
-    <main class="trm-main-1k6p0x">
-    <section class="trm-hero-6s2d9p">
-      <div class="trm-herogrid-4m1z8b">
+    <main class="trm-main">
+    <section class="trm-hero">
+      <div class="trm-herogrid">
         <div>
-          <p class="trm-herokicker-5d7k2m">Terms of Use</p>
+          <p class="trm-herokicker">Terms of Use</p>
           <h1>Clear rules for practice-only play.</h1>
           <p>These Terms explain how Suominettipelit works, who can use it, and what you can expect from practice play.</p>
-          <div class="trm-heroact-8e9t1u">
+          <div class="trm-heroact">
             <a href="play.html">Play now</a>
             <a href="contact.html">Ask a question</a>
           </div>
-          <p class="trm-heronote-7c3r2f">Effective date: 2026-01-15. 18+ only.</p>
+          <p class="trm-heronote">Effective date: 2026-01-15. 18+ only.</p>
         </div>
-        <div class="trm-heroviz-2w6n0q">
-          <div class="trm-herobubble-1d9f3k"></div>
-          <div class="trm-herostack-0h2l9s">
-            <div class="trm-herocard1-5r8a1n">
+        <div class="trm-heroviz">
+          <div class="trm-herostack">
+            <div class="trm-herocard1">
               <h3>Practice only</h3>
               <p>No real money, no prizes, no withdrawals.</p>
             </div>
-            <div class="trm-herocard2-9p4b7v">
+            <div class="trm-herocard2">
               <h3>Respectful use</h3>
               <p>Please keep the lounge safe and friendly.</p>
             </div>
@@ -536,13 +351,13 @@
       </div>
     </section>
 
-    <section class="trm-featured-8u2r5d">
-      <div class="trm-featuredhead-2f7n1x">
+    <section class="trm-featured">
+      <div class="trm-featuredhead">
         <h2>Terms of Use</h2>
         <p>By accessing or using Suominettipelit, you agree to these terms.</p>
       </div>
-      <div class="trm-termsbox-2s6m9v">
-        <ol class="trm-termslist-1k4p7d">
+      <div class="trm-termsbox">
+        <ol class="trm-termslist">
           <li>
             <h3>Eligibility</h3>
             <p>You must be at least 18 years old and have the legal capacity to accept these Terms.</p>
@@ -585,26 +400,25 @@
           </li>
           <li>
             <h3>Contact</h3>
-            <p>Questions about these Terms? Email hello@suominettipelit.example or use the contact page.</p>
-            <p>Email is the fastest way to reach us, but the contact form also works.</p>
+            <p>Questions about these Terms? Email <a href="mailto:support@funandjoy.site">support@funandjoy.site</a> or use the contact page.</p>
+            <p>Email is the fastest way to reach us.</p>
           </li>
         </ol>
       </div>
     </section>
   </main>
 
-  <footer class="trm-footer-5m3c7r">
-    <div class="trm-footin-0z6n8d">
-      <div class="trm-footbrand-7u9p2c">
+  <footer class="trm-footer">
+    <div class="trm-footin">
+      <div class="trm-footbrand">
         <h3>Suominettipelit</h3>
         <p>A small practice lounge inspired by Nordic light and the glow of arcades.</p>
       </div>
-      <div class="trm-footcols-1r5k8g">
+      <div class="trm-footcols">
         <div>
           <h3>Explore</h3>
           <ul>
             <li><a href="games.html">Games</a></li>
-            <li><a href="contact.html">Contact</a></li>
             <li><a href="about.html">About</a></li>
           </ul>
         </div>
@@ -617,34 +431,14 @@
           </ul>
         </div>
       </div>
-      <div class="trm-newswrap-2m9t4b">
-        <h3>Get a short monthly note</h3>
-        <p>Occasional updates about new rooms, playlists, and ways to keep play relaxed.</p>
-        <form class="trm-newsform-6e2v0y" data-newsletter-form>
-          <div class="trm-newsfields-9q1x5d" data-newsletter-fields>
-            <label>
-              Name
-              <input type="text" name="name" autocomplete="name" required>
-            </label>
-            <label>
-              Email
-              <input type="email" name="email" autocomplete="email" required>
-            </label>
-            <button type="submit">Join the list</button>
-          </div>
-          <div class="trm-newssuccess-4n7c1p" data-newsletter-success hidden aria-live="polite">
-            Thanks for signing up. We will send a brief update soon.
-          </div>
-        </form>
-      </div>
-      <p class="trm-footnote-8j3l6t">18+ only. For entertainment only. No real money, prizes, purchases, or cash-out. Take breaks and play responsibly.</p>
+      <p class="trm-footnote">18+ only. For entertainment only. No real money, prizes, purchases, or cash-out. Take breaks and play responsibly.</p>
     </div>
   </footer>
 
-  <div class="trm-cookie-3p8v1z" data-cookie-banner role="dialog" aria-live="polite" aria-label="Cookie consent" hidden>
-    <div class="trm-cookiein-2c7m0k">
+  <div class="trm-cookie" data-cookie-banner role="dialog" aria-live="polite" aria-label="Cookie consent" hidden>
+    <div class="trm-cookiein">
       <p>We use a small cookie to remember your choice and keep the site steady.</p>
-      <div class="trm-cookieactions-6t4r9n">
+      <div class="trm-cookieactions">
         <button type="button" data-cookie-accept>Accept</button>
         <button type="button" data-cookie-decline>Decline</button>
       </div>
@@ -652,7 +446,7 @@
   </div>
 
   <script>
-    // Simple page interactions: cookie consent and newsletter feedback.
+    // Simple page interaction: cookie consent.
     (() => {
       // Cookie banner: remember the choice in localStorage.
       const banner = document.querySelector("[data-cookie-banner]");
@@ -672,23 +466,13 @@
         if (acceptBtn) acceptBtn.addEventListener("click", () => setChoice("accepted"));
         if (declineBtn) declineBtn.addEventListener("click", () => setChoice("declined"));
       }
-
-      // Newsletter form: swap fields for a success message.
-      const form = document.querySelector("[data-newsletter-form]");
-      const fields = document.querySelector("[data-newsletter-fields]");
-      const success = document.querySelector("[data-newsletter-success]");
-      if (form && fields && success) {
-        form.addEventListener("submit", (event) => {
-          event.preventDefault();
-          fields.setAttribute("hidden", "");
-          success.removeAttribute("hidden");
-          form.reset();
-        });
-      }
     })();
   </script>
 </body>
 </html>
+
+
+
 
 
 

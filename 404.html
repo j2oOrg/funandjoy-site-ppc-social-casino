@@ -7,22 +7,7 @@
   <meta name="description" content="We could not find that page.">
   <link rel="icon" href="favicon.ico">
   <style>
-
-    @font-face {
-      font-family: "Happy Vibes";
-      src: url("happy-vibes-happy-vibes-svg-400.otf") format("opentype");
-      font-weight: 400;
-      font-style: normal;
-      font-display: swap;
-    }
-    @font-face {
-      font-family: "Happy Vibes Outline";
-      src: url("happy-vibes-happy-vibes-outline-svg-400.otf") format("opentype");
-      font-weight: 400;
-      font-style: normal;
-      font-display: swap;
-    }
-    :root {
+:root {
       --bg: #f6f1e7;
       --ink: #1c1a15;
       --muted: #6a5f52;
@@ -57,8 +42,8 @@
       line-height: 1.2;
       margin-bottom: 12px;
     }
-    .nf4-wrap-8k2m9p { width: 100%; }
-    .nf4-card-3v7c1q {
+    .nf4-wrap { width: 100%; }
+    .nf4-card {
       max-width: 520px;
       margin: 0 auto;
       background: #fff;
@@ -69,21 +54,21 @@
       display: grid;
       gap: 12px;
     }
-    .nf4-kicker-4n1d8b {
+    .nf4-kicker {
       text-transform: uppercase;
       letter-spacing: 2px;
       font-size: 0.8rem;
       color: var(--teal);
       font-weight: 700;
     }
-    .nf4-note-6s9f2l {
+    .nf4-note {
       color: var(--muted);
       border-left: 3px solid var(--gold);
       padding-left: 10px;
       font-size: 0.9rem;
     }
 
-    .nf4-cookie-7q3m8t {
+    .nf4-cookie {
       position: fixed;
       inset: auto 16px 16px 16px;
       background: #fff;
@@ -92,18 +77,18 @@
       box-shadow: var(--shadow);
       z-index: 30;
     }
-    .nf4-cookiein-5j1c6r {
+    .nf4-cookiein {
       display: grid;
       gap: 12px;
       padding: 16px;
       color: var(--muted);
     }
-    .nf4-cookieactions-9p4d7h {
+    .nf4-cookieactions {
       display: flex;
       gap: 10px;
       flex-wrap: wrap;
     }
-    .nf4-cookieactions-9p4d7h button {
+    .nf4-cookieactions button {
       padding: 8px 14px;
       border-radius: 999px;
       font-weight: 700;
@@ -113,26 +98,27 @@
       cursor: pointer;
       font-family: inherit;
     }
-    .nf4-cookieactions-9p4d7h button:first-child {
+    .nf4-cookieactions button:first-child {
       background: var(--teal);
       color: #fff;
     }
   </style>
+  <link rel="stylesheet" href="assets/moonlight-theme.css">
 </head>
 <body>
-  <main class="nf4-wrap-8k2m9p">
-    <div class="nf4-card-3v7c1q">
-      <p class="nf4-kicker-4n1d8b">404</p>
+  <main class="nf4-wrap">
+    <div class="nf4-card">
+      <p class="nf4-kicker">404</p>
       <h1>This room does not exist</h1>
       <p>We could not find that page. Check the address and try again.</p>
-      <p class="nf4-note-6s9f2l">Practice-only site. 18+ only.</p>
+      <p class="nf4-note">Practice-only site. 18+ only.</p>
     </div>
   </main>
 
-  <div class="nf4-cookie-7q3m8t" data-cookie-banner role="dialog" aria-live="polite" aria-label="Cookie consent" hidden>
-    <div class="nf4-cookiein-5j1c6r">
+  <div class="nf4-cookie" data-cookie-banner role="dialog" aria-live="polite" aria-label="Cookie consent" hidden>
+    <div class="nf4-cookiein">
       <p>We use a small cookie to remember your choice and keep the site steady.</p>
-      <div class="nf4-cookieactions-9p4d7h">
+      <div class="nf4-cookieactions">
         <button type="button" data-cookie-accept>Accept</button>
         <button type="button" data-cookie-decline>Decline</button>
       </div>
@@ -164,3 +150,4 @@
   </script>
 </body>
 </html>
+

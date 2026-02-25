@@ -7,22 +7,7 @@
   <meta name="description" content="Suominettipelit is a relaxed, play-for-fun lounge with themed rooms and practice-only spins. No real money, no prizes.">
   <link rel="icon" href="favicon.ico">
   <style>
-
-    @font-face {
-      font-family: "Happy Vibes";
-      src: url("happy-vibes-happy-vibes-svg-400.otf") format("opentype");
-      font-weight: 400;
-      font-style: normal;
-      font-display: swap;
-    }
-    @font-face {
-      font-family: "Happy Vibes Outline";
-      src: url("happy-vibes-happy-vibes-outline-svg-400.otf") format("opentype");
-      font-weight: 400;
-      font-style: normal;
-      font-display: swap;
-    }
-    :root {
+:root{
       --bg: #f6f1e7;
       --ink: #1c1a15;
       --muted: #6a5f52;
@@ -36,8 +21,8 @@
       --radius: 20px;
       --maxw: 1120px;
     }
-    * { box-sizing: border-box; margin: 0; padding: 0; }
-    body {
+    *{ box-sizing: border-box; margin: 0; padding: 0; }
+    body{
       font-family: "Palatino Linotype", "Book Antiqua", Palatino, serif;
       color: var(--ink);
       background: radial-gradient(circle at top, #fff5e6 0%, #f6f1e7 55%, #f0e5d8 100%);
@@ -45,8 +30,7 @@
       line-height: 1.6;
       position: relative;
     }
-    body::before,
-    body::after {
+    body::before, body::after{
       content: "";
       position: fixed;
       inset: 0;
@@ -57,40 +41,32 @@
         radial-gradient(260px 260px at 90% 10%, rgba(242, 201, 76, 0.2), transparent 72%),
         radial-gradient(300px 300px at 90% 80%, rgba(229, 90, 61, 0.12), transparent 75%);
     }
-    h1, h2, h3 {
+    h1, h2, h3{
       font-family: "Happy Vibes", "Trebuchet MS", "Lucida Sans Unicode", "Lucida Grande", sans-serif;
       letter-spacing: 0.2px;
       line-height: 1.2;
     }
-    .idx-benefits-6q1v7m h2,
-    .idx-featured-8u2r5d h2,
-    .idx-steps-7g1s4l h2 {
+    .idx-benefits h2, .idx-featured h2, .idx-steps h2{
       font-size: clamp(1.8rem, 3.2vw, 2.5rem);
     }
-    .idx-featuredgrid-1b6m8s h3 { font-size: 1.4rem; }
-    .idx-benefitgrid-3t6c1j h3,
-    .idx-stepsgrid-2q8e0a h3,
-    .idx-herocard1-5r8a1n h3,
-    .idx-herocard2-9p4b7v h3 {
+    .idx-featuredgrid h3{ font-size: 1.4rem; }
+    .idx-benefitgrid h3, .idx-stepsgrid h3, .idx-herocard1 h3, .idx-herocard2 h3{
       font-size: 1.2rem;
     }
-    a { color: inherit; text-decoration: none; }
-    img { max-width: 100%; display: block; }
-    button {
+    a{ color: inherit; text-decoration: none; }
+    img{ max-width: 100%; display: block; }
+    button{
       font-family: inherit;
       border: none;
       background: none;
       cursor: pointer;
     }
-    a:focus-visible,
-    button:focus-visible,
-    input:focus-visible,
-    textarea:focus-visible {
+    a:focus-visible, button:focus-visible, input:focus-visible, textarea:focus-visible{
       outline: 2px solid var(--teal);
       outline-offset: 2px;
     }
 
-    .idx-header-3a6f9m {
+    .idx-header{
       position: sticky;
       top: 0;
       z-index: 20;
@@ -98,27 +74,19 @@
       border-bottom: 1px solid var(--line);
       backdrop-filter: blur(6px);
     }
-    .idx-headin-0q7w2e,
-    .idx-hero-6s2d9p,
-    .idx-benefits-6q1v7m,
-    .idx-notes-8n2k6v,
-    .idx-guide-9t4v7x,
-    .idx-featured-8u2r5d,
-    .idx-stats-4x9k0p,
-    .idx-steps-7g1s4l,
-    .idx-footin-0z6n8d {
+    .idx-headin, .idx-hero, .idx-benefits, .idx-notes, .idx-guide, .idx-featured, .idx-stats, .idx-steps, .idx-footin{
       max-width: var(--maxw);
       margin: 0 auto;
       padding: 0 20px;
     }
-    .idx-headin-0q7w2e {
+    .idx-headin{
       display: flex;
       align-items: center;
       justify-content: space-between;
       gap: 16px;
       padding: 16px 20px;
     }
-    .idx-brand-8t4j1c {
+    .idx-brand{
       display: inline-flex;
       align-items: center;
       gap: 10px;
@@ -126,48 +94,39 @@
       font-weight: 400;
       font-size: 1.1rem;
     }
-    .idx-brand-8t4j1c svg {
+    .idx-brand svg{
       width: 34px;
       height: 34px;
     }
-    .idx-nav-5n8s0d ul {
+    .idx-nav ul{
       list-style: none;
       display: flex;
       gap: 16px;
       flex-wrap: wrap;
       font-size: 0.95rem;
     }
-    .idx-nav-5n8s0d a {
+    .idx-nav a{
       padding: 6px 8px;
       border-radius: 999px;
     }
-    .idx-nav-5n8s0d a:hover {
+    .idx-nav a:hover{
       background: #f2e5d8;
     }
-    .idx-cta-9v2c6a {
-      background: var(--accent);
-      color: #fff;
-      padding: 10px 18px;
-      border-radius: 999px;
-      font-weight: 700;
-      box-shadow: 0 8px 20px rgba(229, 90, 61, 0.25);
-    }
-    .idx-cta-9v2c6a:hover { background: var(--accent-dark); }
 
-    .idx-main-1k6p0x { padding: 28px 0 96px; }
+    .idx-main{ padding: 28px 0 96px; }
 
-    .idx-hero-6s2d9p { padding: 70px 20px 40px; }
-    .idx-herogrid-4m1z8b {
+    .idx-hero{ padding: 70px 20px 40px; }
+    .idx-herogrid{
       display: grid;
       gap: 40px;
       align-items: center;
     }
-    .idx-herotext-7k2m4q {
+    .idx-herotext{
       display: grid;
       gap: 16px;
       align-content: center;
     }
-    .idx-herokicker-5d7k2m {
+    .idx-herokicker{
       text-transform: uppercase;
       font-size: 0.7rem;
       letter-spacing: 3px;
@@ -175,24 +134,24 @@
       font-weight: 700;
       margin-bottom: 14px;
     }
-    .idx-hero-6s2d9p h1 {
-      font-size: clamp(2.8rem, 4.6vw, 4.8rem);
+    .idx-hero h1{
+      font-size: clamp(1.9rem, 3.1vw, 2.8rem);
       margin-bottom: 6px;
       max-width: 660px;
     }
-    .idx-herotext-7k2m4q p {
+    .idx-herotext p{
       color: var(--muted);
       font-size: 1.06rem;
       max-width: 580px;
     }
-    .idx-heroact-8e9t1u {
+    .idx-heroact{
       display: flex;
       gap: 14px;
       flex-wrap: wrap;
       align-items: center;
       margin: 10px 0 6px;
     }
-    .idx-heroact-8e9t1u a {
+    .idx-heroact a{
       padding: 13px 22px;
       border-radius: 999px;
       font-weight: 700;
@@ -202,7 +161,7 @@
       letter-spacing: 0.2px;
       box-shadow: 0 12px 24px rgba(15, 129, 138, 0.2);
     }
-    .idx-heronote-7c3r2f {
+    .idx-heronote{
       font-size: 0.9rem;
       color: var(--muted);
       background: rgba(242, 201, 76, 0.2);
@@ -211,7 +170,7 @@
       display: inline-flex;
       border: 1px solid rgba(242, 201, 76, 0.4);
     }
-    .idx-heroviz-2w6n0q {
+    .idx-heroviz{
       position: relative;
       min-height: 420px;
       border-radius: 28px;
@@ -225,8 +184,7 @@
       display: grid;
       align-content: center;
     }
-    .idx-heroviz-2w6n0q::before,
-    .idx-heroviz-2w6n0q::after {
+    .idx-heroviz::before, .idx-heroviz::after{
       content: "";
       position: absolute;
       width: 26px;
@@ -238,24 +196,15 @@
       transform: translateY(-50%);
       z-index: 0;
     }
-    .idx-heroviz-2w6n0q::before { left: -13px; }
-    .idx-heroviz-2w6n0q::after { right: -13px; }
-    .idx-herobubble-1d9f3k {
-      position: absolute;
-      inset: -20px auto auto -20px;
-      width: 190px;
-      height: 190px;
-      border-radius: 50%;
-      background: radial-gradient(circle, rgba(242, 201, 76, 0.6), rgba(242, 201, 76, 0));
-      filter: blur(2px);
-    }
-    .idx-herostack-0h2l9s {
+    .idx-heroviz::before{ left: -13px; }
+    .idx-heroviz::after{ right: -13px; }
+    .idx-herostack{
       display: grid;
       gap: 18px;
       position: relative;
       z-index: 1;
     }
-    .idx-herocard1-5r8a1n {
+    .idx-herocard1{
       background: #fff;
       border-radius: 18px;
       padding: 18px;
@@ -264,7 +213,7 @@
       display: grid;
       gap: 10px;
     }
-    .idx-herocard1-5r8a1n span {
+    .idx-herocard1 span{
       justify-self: start;
       font-size: 0.7rem;
       text-transform: uppercase;
@@ -275,7 +224,7 @@
       border-radius: 999px;
       font-weight: 700;
     }
-    .idx-herocard1-5r8a1n ul {
+    .idx-herocard1 ul{
       list-style: none;
       display: grid;
       gap: 6px;
@@ -284,11 +233,11 @@
       color: var(--muted);
       font-size: 0.92rem;
     }
-    .idx-herocard1-5r8a1n li {
+    .idx-herocard1 li{
       position: relative;
       padding-left: 16px;
     }
-    .idx-herocard1-5r8a1n li::before {
+    .idx-herocard1 li::before{
       content: "";
       position: absolute;
       left: 0;
@@ -298,7 +247,7 @@
       border-radius: 50%;
       background: var(--accent);
     }
-    .idx-herocard2-9p4b7v {
+    .idx-herocard2{
       background: rgba(15, 129, 138, 0.1);
       border-radius: 16px;
       padding: 16px 18px;
@@ -306,24 +255,23 @@
       display: grid;
       gap: 6px;
     }
-    .idx-herocard2-9p4b7v span {
+    .idx-herocard2 span{
       font-size: 0.7rem;
       text-transform: uppercase;
       letter-spacing: 2px;
       color: var(--teal);
       font-weight: 700;
     }
-    .idx-herocard1-5r8a1n h3,
-    .idx-herocard2-9p4b7v h3 {
+    .idx-herocard1 h3, .idx-herocard2 h3{
       margin-bottom: 2px;
     }
 
-    .idx-benefits-6q1v7m { padding: 48px 20px; }
-    .idx-benefitwrap-2f9d6b {
+    .idx-benefits{ padding: 48px 20px; }
+    .idx-benefitwrap{
       display: grid;
       gap: 20px;
     }
-    .idx-benefitlead-5j8n1s {
+    .idx-benefitlead{
       background: #fff;
       border-radius: 22px;
       padding: 22px;
@@ -332,12 +280,12 @@
       display: grid;
       gap: 12px;
     }
-    .idx-benefitlead-5j8n1s p { color: var(--muted); }
-    .idx-benefitgrid-3t6c1j {
+    .idx-benefitlead p{ color: var(--muted); }
+    .idx-benefitgrid{
       display: grid;
       gap: 16px;
     }
-    .idx-benefitgrid-3t6c1j article {
+    .idx-benefitgrid article{
       background: #fff;
       border-radius: 18px;
       padding: 18px;
@@ -347,8 +295,8 @@
       gap: 6px;
     }
 
-    .idx-notes-8n2k6v { padding: 46px 20px; }
-    .idx-notesgrid-4w9d2s {
+    .idx-notes{ padding: 46px 20px; }
+    .idx-notesgrid{
       display: grid;
       gap: 18px;
       background: #fff;
@@ -357,19 +305,19 @@
       padding: 24px;
       box-shadow: var(--shadow);
     }
-    .idx-noteslead-1p7b4t {
+    .idx-noteslead{
       display: grid;
       gap: 8px;
     }
-    .idx-noteslead-1p7b4t p { color: var(--muted); }
-    .idx-notestext-5m3r9k {
+    .idx-noteslead p{ color: var(--muted); }
+    .idx-notestext{
       display: grid;
       gap: 12px;
       color: var(--muted);
     }
 
-    .idx-guide-9t4v7x { padding: 46px 20px; }
-    .idx-guidegrid-2h6k9q {
+    .idx-guide{ padding: 46px 20px; }
+    .idx-guidegrid{
       display: grid;
       gap: 18px;
       background: #fff;
@@ -378,12 +326,12 @@
       padding: 24px;
       box-shadow: var(--shadow);
     }
-    .idx-guidetext-5m1s8d {
+    .idx-guidetext{
       display: grid;
       gap: 10px;
     }
-    .idx-guidetext-5m1s8d p { color: var(--muted); }
-    .idx-guidelist-6r3p9b {
+    .idx-guidetext p{ color: var(--muted); }
+    .idx-guidelist{
       background: rgba(15, 129, 138, 0.08);
       border-radius: 18px;
       padding: 18px;
@@ -391,7 +339,7 @@
       display: grid;
       gap: 8px;
     }
-    .idx-guidelist-6r3p9b ul {
+    .idx-guidelist ul{
       list-style: none;
       display: grid;
       gap: 8px;
@@ -399,11 +347,11 @@
       padding: 0;
       color: var(--muted);
     }
-    .idx-guidelist-6r3p9b li {
+    .idx-guidelist li{
       position: relative;
       padding-left: 16px;
     }
-    .idx-guidelist-6r3p9b li::before {
+    .idx-guidelist li::before{
       content: "";
       position: absolute;
       left: 0;
@@ -414,43 +362,44 @@
       background: var(--teal);
     }
 
-    .idx-featured-8u2r5d { padding: 48px 20px; }
-    .idx-featuredhead-2f7n1x {
+    .idx-featured{ padding: 28px 20px 48px; }
+    .idx-featuredhead{
       display: grid;
       gap: 6px;
       margin-bottom: 18px;
-      max-width: 520px;
+      max-width: 720px;
     }
-    .idx-featuredgrid-1b6m8s {
+    .idx-featuredgrid{
       display: grid;
-      gap: 24px;
+      gap: 18px;
+      grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
     }
-    .idx-featuredgrid-1b6m8s article {
+    .idx-featuredgrid article{
       background: #fff;
-      border-radius: 24px;
-      padding: 22px;
+      border-radius: 20px;
       border: 1px solid var(--line);
       display: grid;
-      gap: 20px;
-      box-shadow: var(--shadow);
-    }
-    .idx-featuredgrid-1b6m8s figure {
-      margin: 0;
-      border-radius: 18px;
+      gap: 0;
       overflow: hidden;
-      border: 1px solid var(--line);
-      background: #fff;
+      box-shadow: 0 10px 24px rgba(20, 16, 10, 0.08);
     }
-    .idx-featuredgrid-1b6m8s img {
+    .idx-featuredgrid figure{
+      margin: 0;
+      overflow: hidden;
+      border-bottom: 1px solid var(--line);
+    }
+    .idx-featuredgrid img{
       width: 100%;
-      height: 220px;
+      height: 150px;
       object-fit: cover;
     }
-    .idx-featuredgrid-1b6m8s article > div {
+    .idx-featuredgrid article > div{
       display: grid;
       gap: 10px;
+      padding: 14px;
+      align-content: start;
     }
-    .idx-featuredgrid-1b6m8s article span {
+    .idx-featuredgrid article span{
       justify-self: start;
       font-size: 0.75rem;
       text-transform: uppercase;
@@ -461,34 +410,22 @@
       border-radius: 999px;
       font-weight: 700;
     }
-    .idx-featuredgrid-1b6m8s ul {
-      list-style: none;
-      display: grid;
-      gap: 6px;
-      margin: 0;
-      padding: 0;
-      color: var(--muted);
+    .idx-featuredgrid p{ color: var(--muted); }
+    .idx-featuredgrid a{
+      justify-self: start;
+      background: var(--accent);
+      color: #fff;
+      padding: 8px 14px;
+      border-radius: 999px;
+      font-weight: 700;
     }
-    .idx-featuredgrid-1b6m8s li {
-      position: relative;
-      padding-left: 16px;
-    }
-    .idx-featuredgrid-1b6m8s li::before {
-      content: "";
-      position: absolute;
-      left: 0;
-      top: 0.55em;
-      width: 6px;
-      height: 6px;
-      border-radius: 50%;
-      background: var(--teal);
-    }
+    .idx-featuredgrid a:hover{ background: var(--accent-dark); }
 
-    .idx-stats-4x9k0p {
+    .idx-stats{
       padding: 20px 20px 10px;
-      margin: 0 0 36px;
+      margin: 0 auto 36px;
     }
-    .idx-statsgrid-9y2w6h {
+    .idx-statsgrid{
       display: grid;
       gap: 0;
       background: #fff;
@@ -497,7 +434,7 @@
       padding: 0;
       box-shadow: 0 10px 24px rgba(20, 16, 10, 0.08);
     }
-    .idx-statsgrid-9y2w6h div {
+    .idx-statsgrid div{
       display: grid;
       gap: 4px;
       text-align: center;
@@ -505,30 +442,30 @@
       justify-items: center;
       align-content: center;
     }
-    .idx-statsgrid-9y2w6h div + div { border-top: 1px dashed var(--line); }
-    .idx-statsgrid-9y2w6h span {
+    .idx-statsgrid div + div{ border-top: 1px dashed var(--line); }
+    .idx-statsgrid span{
       font-size: 1.9rem;
       font-weight: 700;
       color: var(--teal);
     }
-    .idx-statnote-4v2s8q {
+    .idx-statnote{
       margin-top: 14px;
       color: var(--muted);
       max-width: 640px;
     }
 
-    .idx-steps-7g1s4l { padding: 46px 20px; }
-    .idx-steps-7g1s4l h2 { margin-bottom: 10px; }
-    .idx-steps-7g1s4l > p {
+    .idx-steps{ padding: 46px 20px; }
+    .idx-steps h2{ margin-bottom: 10px; }
+    .idx-steps > p{
       color: var(--muted);
       max-width: 640px;
       margin-bottom: 18px;
     }
-    .idx-stepsgrid-2q8e0a {
+    .idx-stepsgrid{
       display: grid;
       gap: 18px;
     }
-    .idx-stepsgrid-2q8e0a article {
+    .idx-stepsgrid article{
       background: #fff;
       border-radius: 18px;
       padding: 26px 20px 20px;
@@ -536,7 +473,7 @@
       position: relative;
       box-shadow: 0 8px 18px rgba(20, 16, 10, 0.06);
     }
-    .idx-stepsgrid-2q8e0a article::before {
+    .idx-stepsgrid article::before{
       content: attr(data-step);
       position: absolute;
       width: 36px;
@@ -550,75 +487,33 @@
       font-weight: 700;
     }
 
-    .idx-footer-5m3c7r {
+    .idx-footer{
       background: #f3e8dc;
       border-top: 1px solid var(--line);
       padding: 40px 0 60px;
     }
-    .idx-footin-0z6n8d {
+    .idx-footin{
       display: grid;
       gap: 24px;
     }
-    .idx-footbrand-7u9p2c {
+    .idx-footbrand{
       display: grid;
       gap: 8px;
       max-width: 420px;
     }
-    .idx-footcols-1r5k8g {
+    .idx-footcols{
       display: grid;
       gap: 16px;
     }
-    .idx-footcols-1r5k8g ul { list-style: none; display: grid; gap: 6px; }
-    .idx-newswrap-2m9t4b {
-      background: #fff;
-      border-radius: var(--radius);
-      padding: 18px;
-      border: 1px solid var(--line);
-      box-shadow: 0 8px 18px rgba(20, 16, 10, 0.06);
-    }
-    .idx-newswrap-2m9t4b h3 { margin-bottom: 8px; }
-    .idx-newsform-6e2v0y {
-      display: grid;
-      gap: 12px;
-    }
-    .idx-newsfields-9q1x5d {
-      display: grid;
-      gap: 12px;
-    }
-    .idx-newsfields-9q1x5d label {
-      display: grid;
-      gap: 6px;
-      font-size: 0.95rem;
-      color: var(--muted);
-    }
-    .idx-newsfields-9q1x5d input {
-      padding: 10px 12px;
-      border-radius: 12px;
-      border: 1px solid var(--line);
-      background: #fff;
-    }
-    .idx-newsform-6e2v0y button {
-      justify-self: start;
-      background: var(--teal);
-      color: #fff;
-      padding: 10px 16px;
-      border-radius: 999px;
-      font-weight: 700;
-    }
-    .idx-newssuccess-4n7c1p {
-      background: rgba(15, 129, 138, 0.12);
-      border-radius: 14px;
-      padding: 12px;
-      color: var(--ink);
-    }
-    .idx-footnote-8j3l6t {
+    .idx-footcols ul{ list-style: none; display: grid; gap: 6px; }
+    .idx-footnote{
       color: var(--muted);
       font-size: 0.9rem;
       border-left: 3px solid var(--accent);
       padding-left: 10px;
     }
 
-    .idx-cookie-3p8v1z {
+    .idx-cookie{
       position: fixed;
       inset: auto 16px 16px 16px;
       background: #fff;
@@ -627,18 +522,18 @@
       box-shadow: var(--shadow);
       z-index: 30;
     }
-    .idx-cookiein-2c7m0k {
+    .idx-cookiein{
       display: grid;
       gap: 12px;
       padding: 16px;
       color: var(--muted);
     }
-    .idx-cookieactions-6t4r9n {
+    .idx-cookieactions{
       display: flex;
       gap: 10px;
       flex-wrap: wrap;
     }
-    .idx-cookieactions-6t4r9n button {
+    .idx-cookieactions button{
       padding: 8px 14px;
       border-radius: 999px;
       font-weight: 700;
@@ -646,43 +541,37 @@
       color: var(--teal);
       background: transparent;
     }
-    .idx-cookieactions-6t4r9n button:first-child {
+    .idx-cookieactions button:first-child{
       background: var(--teal);
       color: #fff;
     }
 
     @media (min-width: 820px) {
-      .idx-herogrid-4m1z8b { grid-template-columns: 1.15fr 0.85fr; }
-      .idx-benefitwrap-2f9d6b { grid-template-columns: 0.95fr 1.05fr; align-items: center; }
-      .idx-benefitgrid-3t6c1j { grid-template-columns: repeat(2, minmax(0, 1fr)); }
-      .idx-benefitgrid-3t6c1j article:last-child { grid-column: span 2; }
-      .idx-notesgrid-4w9d2s { grid-template-columns: 0.9fr 1.1fr; align-items: start; }
-      .idx-guidegrid-2h6k9q { grid-template-columns: 1.05fr 0.95fr; align-items: start; }
-      .idx-featuredgrid-1b6m8s article { grid-template-columns: 1.05fr 0.95fr; align-items: center; }
-      .idx-featuredgrid-1b6m8s img { height: 260px; }
-      .idx-statsgrid-9y2w6h { grid-template-columns: repeat(3, 1fr); }
-      .idx-statsgrid-9y2w6h div + div { border-top: none; border-left: 1px dashed var(--line); }
-      .idx-stepsgrid-2q8e0a { grid-template-columns: repeat(3, 1fr); }
-      .idx-stepsgrid-2q8e0a article:nth-child(2) { transform: translateY(18px); }
-      .idx-stepsgrid-2q8e0a article:nth-child(3) { transform: translateY(36px); }
-      .idx-footin-0z6n8d { grid-template-columns: 1.1fr 1fr 1fr; align-items: start; }
-      .idx-footcols-1r5k8g { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+      .idx-herogrid{ grid-template-columns: 1.15fr 0.85fr; }
+      .idx-benefitwrap{ grid-template-columns: 0.95fr 1.05fr; align-items: center; }
+      .idx-benefitgrid{ grid-template-columns: repeat(2, minmax(0, 1fr)); }
+      .idx-benefitgrid article:last-child{ grid-column: span 2; }
+      .idx-notesgrid{ grid-template-columns: 0.9fr 1.1fr; align-items: start; }
+      .idx-guidegrid{ grid-template-columns: 1.05fr 0.95fr; align-items: start; }
+      .idx-featuredgrid{ grid-template-columns: repeat(3, minmax(0, 1fr)); }
+      .idx-featuredgrid img{ height: 160px; }
+      .idx-statsgrid{ grid-template-columns: repeat(2, 1fr); }
+      .idx-statsgrid div + div{ border-top: none; border-left: 1px dashed var(--line); }
+      .idx-stepsgrid{ grid-template-columns: repeat(3, 1fr); }
+      .idx-stepsgrid article:nth-child(2){ transform: translateY(18px); }
+      .idx-stepsgrid article:nth-child(3){ transform: translateY(36px); }
+      .idx-footin{ grid-template-columns: 1.1fr 1fr 1fr; align-items: start; }
+      .idx-footcols{ grid-template-columns: repeat(2, minmax(0, 1fr)); }
     }
 
     @media (prefers-reduced-motion: reduce) {
-      * { animation: none !important; transition: none !important; }
+      *{ animation: none !important; transition: none !important; }
     }
 
-    .idx-hero-6s2d9p,
-    .idx-benefits-6q1v7m,
-    .idx-notes-8n2k6v,
-    .idx-guide-9t4v7x,
-    .idx-featured-8u2r5d,
-    .idx-stats-4x9k0p,
-    .idx-steps-7g1s4l {
+    .idx-hero, .idx-benefits, .idx-notes, .idx-guide, .idx-featured, .idx-stats, .idx-steps{
       animation: fadeUp 0.8s ease both;
     }
-    .idx-featuredgrid-1b6m8s article {
+    .idx-featuredgrid article{
       animation: floatIn 0.7s ease both;
     }
 
@@ -695,11 +584,12 @@
       to { opacity: 1; transform: translateY(0) scale(1); }
     }
   </style>
+  <link rel="stylesheet" href="assets/moonlight-theme.css">
 </head>
 <body>
-  <header class="idx-header-3a6f9m">
-    <div class="idx-headin-0q7w2e">
-      <a class="idx-brand-8t4j1c" href="index.html" aria-label="Suominettipelit home">
+  <header class="idx-header">
+    <div class="idx-headin">
+      <a class="idx-brand" href="index.html" aria-label="Suominettipelit home">
         <svg viewBox="0 0 48 48" role="img" aria-hidden="true">
           <defs>
             <linearGradient id="idx-logo-grad" x1="0" y1="0" x2="1" y2="1">
@@ -712,7 +602,7 @@
         </svg>
         <span>Suominettipelit</span>
       </a>
-      <nav class="idx-nav-5n8s0d" aria-label="Primary">
+      <nav class="idx-nav" aria-label="Primary">
         <ul>
           <li><a href="index.html" aria-current="page">Home</a></li>
           <li><a href="games.html">Games</a></li><li><a href="about.html">About</a></li>
@@ -721,41 +611,39 @@
           <li><a href="policy.html">Privacy</a></li>
         </ul>
       </nav>
-      <a class="idx-cta-9v2c6a" href="games.html">View room</a>
     </div>
   </header>
 
-  <main class="idx-main-1k6p0x">
-    <section class="idx-hero-6s2d9p">
-      <div class="idx-herogrid-4m1z8b">
-        <div class="idx-herotext-7k2m4q">
-          <p class="idx-herokicker-5d7k2m">A relaxed play lounge</p>
-          <h1>Gold Volcano sets the mood for a calm practice session.</h1>
+  <main class="idx-main">
+    <section class="idx-hero">
+      <div class="idx-herogrid">
+        <div class="idx-herotext">
+          <p class="idx-herokicker">A relaxed play lounge</p>
+          <h1>Pick a room and settle in for a calm practice session.</h1>
           <p>Suominettipelit is a free-to-play social casino lounge for practice-only spins. Drop in for a short break, keep the pace gentle, and leave when you like.</p>
           <p>Honestly, it feels more like a study break than a rush. Five minutes between classes is plenty.</p>
           <p>The point isn't to grind; it's to reset your brain with a calm theme and a steady rhythm.</p>
           <p>Some people leave it open while they work on notes, just for the ambience. Others pop in, spin a few times, and close the tab.</p>
           <p>There is no scoreboard or leaderboard here. The vibe is the point, not the outcome.</p>
           <p>If you want structure, set a tiny limit for yourself and call it a good break when you hit it.</p>
-          <div class="idx-heroact-8e9t1u">
-            <a href="play.html">Enter Gold Volcano</a>
+          <div class="idx-heroact">
+            <a href="play.html">Open Play Room</a>
           </div>
-          <p class="idx-heronote-7c3r2f">18+ only. For entertainment only. No real money, prizes, purchases, or cash-out.</p>
+          <p class="idx-heronote">18+ only. For entertainment only. No real money, prizes, purchases, or cash-out.</p>
         </div>
-        <div class="idx-heroviz-2w6n0q">
-          <div class="idx-herobubble-1d9f3k"></div>
-          <div class="idx-herostack-0h2l9s">
-            <div class="idx-herocard1-5r8a1n">
+        <div class="idx-heroviz">
+          <div class="idx-herostack">
+            <div class="idx-herocard1">
               <span>Room pass</span>
-              <h3>Gold Volcano</h3>
-              <p>Warm glow and a steady rhythm, built for practice-only spins.</p>
+              <h3>9 game rooms</h3>
+              <p>Play'n GO picks with a steady pace, built for practice-only spins.</p>
               <ul>
                 <li>Practice-only spins</li>
                 <li>Room opens in a click</li>
                 <li>Close any time</li>
               </ul>
             </div>
-            <div class="idx-herocard2-9p4b7v">
+            <div class="idx-herocard2">
               <span>Session idea</span>
               <h3>Ten-spin reset</h3>
               <p>Set a short timer, do ten spins, and log off feeling fresh.</p>
@@ -765,16 +653,25 @@
       </div>
     </section>
 
-    <section class="idx-benefits-6q1v7m">
-      <div class="idx-benefitwrap-2f9d6b">
-        <div class="idx-benefitlead-5j8n1s">
+    <section class="idx-featured">
+      <div class="idx-featuredhead">
+        <h2>Featured games</h2>
+        <p>All current Play'n GO rooms in this lounge, ready for practice play.</p>
+        <p>Pick any game card below to jump straight into the play page.</p>
+      </div>
+      <div class="idx-featuredgrid" data-featured-games></div>
+    </section>
+
+    <section class="idx-benefits">
+      <div class="idx-benefitwrap">
+        <div class="idx-benefitlead">
           <h2>Why people come back</h2>
           <p>Suominettipelit keeps things light: calm visuals, clear expectations, and a pace you control.</p>
           <p>It's a practice-only lounge, built for quick breaks or long, quiet evenings.</p>
           <p>We keep the language plain and the rules obvious, so you always know what you're seeing.</p>
           <p>Think of it as the trimmed-down version of a bigger entertainment site, with just the pieces that actually feel useful.</p>
         </div>
-        <div class="idx-benefitgrid-3t6c1j">
+        <div class="idx-benefitgrid">
           <article>
             <h3>Open, no friction</h3>
             <p>Pick the room and you're in. No accounts, no downloads.</p>
@@ -791,16 +688,16 @@
       </div>
     </section>
 
-    <section class="idx-notes-8n2k6v">
-      <div class="idx-notesgrid-4w9d2s">
-        <div class="idx-noteslead-1p7b4t">
+    <section class="idx-notes">
+      <div class="idx-notesgrid">
+        <div class="idx-noteslead">
           <h2>Quick lounge notes</h2>
           <p>We kept it small on purpose. Endless menus are a mood killer, so one solid room feels better.</p>
           <p>Everything runs in practice mode only, which keeps the session low pressure.</p>
-          <p>It is a simple idea: one room, one pace, and no mystery about what happens next.</p>
+          <p>It is a simple idea: a small catalog, one pace, and no mystery about what happens next.</p>
         </div>
-        <div class="idx-notestext-5m3r9k">
-          <p>Gold Volcano is all warm light and smooth motion. It's the kind of screen you can glance at while you sip coffee or answer a text.</p>
+        <div class="idx-notestext">
+          <p>The catalog leans warm and readable, with game rooms that work for short breaks or low-key evening sessions.</p>
           <p>It borrows a little kasinot glow, but keeps everything free-to-play and low pressure.</p>
           <p>If you want a simple routine, try the ten-spin reset: a short run, then close the tab and move on.</p>
           <p>We designed the layout to feel clean on a laptop, because that's how most of us end up playing during breaks.</p>
@@ -809,18 +706,18 @@
       </div>
     </section>
 
-    <section class="idx-guide-9t4v7x">
-      <div class="idx-guidegrid-2h6k9q">
-        <div class="idx-guidetext-5m1s8d">
+    <section class="idx-guide">
+      <div class="idx-guidegrid">
+        <div class="idx-guidetext">
           <h2>What to expect when you drop in</h2>
           <p>This site is built around short, low-pressure moments. You can stay for two minutes or twenty, and both still feel complete.</p>
           <p>We keep the mood steady, so you do not have to learn a new layout every time you visit.</p>
           <p>If you want a quick reset between tasks, this is the kind of place that lets you do that without fuss.</p>
         </div>
-        <div class="idx-guidelist-6r3p9b">
+        <div class="idx-guidelist">
           <h3>Quick expectations</h3>
           <ul>
-            <li>One featured room with a clear theme.</li>
+            <li>Nine featured games with clear themes.</li>
             <li>Practice mode only, no real money or prizes.</li>
             <li>Short sessions that are easy to end.</li>
             <li>Simple labels so you can find your way fast.</li>
@@ -829,59 +726,29 @@
       </div>
     </section>
 
-    <section class="idx-featured-8u2r5d">
-      <div class="idx-featuredhead-2f7n1x">
-        <h2>Featured room</h2>
-        <p>The one room in focus today, ready for a practice session.</p>
-        <p>Gold Volcano is the anchor of the site right now. It is easy to read, not too flashy, and it works well on a laptop.</p>
-      </div>
-      <div class="idx-featuredgrid-1b6m8s">
-        <article>
-          <figure>
-            <img src="volcano.png" alt="Gold Volcano game preview">
-          </figure>
-          <div>
-            <span>Single room spotlight</span>
-            <h3>Gold Volcano</h3>
-            <p>Molten gold tones, teal sparks, and an easy rhythm made for short breaks.</p>
-            <p>If you are not sure where to start, this is the safest pick. It is balanced and not overwhelming.</p>
-            <ul>
-              <li>Practice mode only</li>
-              <li>Arcade-inspired glow</li>
-              <li>Short-session friendly</li>
-            </ul>
-          </div>
-        </article>
-      </div>
-    </section>
-
-    <section class="idx-stats-4x9k0p">
-      <div class="idx-statsgrid-9y2w6h">
+    <section class="idx-stats">
+      <div class="idx-statsgrid">
         <div>
-          <span>1</span>
-          <p>Room open today</p>
-        </div>
-        <div>
-          <span>0</span>
-          <p>Real money involved</p>
+          <span>9</span>
+          <p>Rooms open today</p>
         </div>
         <div>
           <span>18+</span>
           <p>Entry age</p>
         </div>
       </div>
-      <p class="idx-statnote-4v2s8q">These numbers are not marketing hype, just a quick snapshot of how simple the lounge really is.</p>
+      <p class="idx-statnote">These numbers are not marketing hype, just a quick snapshot of how simple the lounge really is.</p>
     </section>
 
-    <section class="idx-steps-7g1s4l">
+    <section class="idx-steps">
       <h2>How it works</h2>
       <p>Three small steps, that's it. You can start and finish without digging through menus.</p>
       <p>Most people find their pace after one or two sessions, and then it feels automatic.</p>
-      <div class="idx-stepsgrid-2q8e0a">
+      <div class="idx-stepsgrid">
         <article data-step="1">
           <h3>Pick a room</h3>
           <p>Choose a theme that fits your mood, then enter when it feels right.</p>
-          <p>If you are unsure, start with Gold Volcano and adjust later.</p>
+          <p>If you are unsure, start with any card below and adjust later.</p>
         </article>
         <article data-step="2">
           <h3>Play in practice mode</h3>
@@ -897,18 +764,17 @@
     </section>
   </main>
 
-  <footer class="idx-footer-5m3c7r">
-    <div class="idx-footin-0z6n8d">
-      <div class="idx-footbrand-7u9p2c">
+  <footer class="idx-footer">
+    <div class="idx-footin">
+      <div class="idx-footbrand">
         <h3>Suominettipelit</h3>
         <p>A small practice lounge inspired by Nordic light and the glow of arcades.</p>
       </div>
-      <div class="idx-footcols-1r5k8g">
+      <div class="idx-footcols">
         <div>
           <h3>Explore</h3>
           <ul>
             <li><a href="games.html">Games</a></li>
-            <li><a href="contact.html">Contact</a></li>
             <li><a href="about.html">About</a></li>
           </ul>
         </div>
@@ -921,34 +787,14 @@
           </ul>
         </div>
       </div>
-      <div class="idx-newswrap-2m9t4b">
-        <h3>Get a short monthly note</h3>
-        <p>Occasional updates about new rooms, playlists, and ways to keep play relaxed.</p>
-        <form class="idx-newsform-6e2v0y" data-newsletter-form>
-          <div class="idx-newsfields-9q1x5d" data-newsletter-fields>
-            <label>
-              Name
-              <input type="text" name="name" autocomplete="name" required>
-            </label>
-            <label>
-              Email
-              <input type="email" name="email" autocomplete="email" required>
-            </label>
-            <button type="submit">Join the list</button>
-          </div>
-          <div class="idx-newssuccess-4n7c1p" data-newsletter-success hidden aria-live="polite">
-            Thanks for signing up. We will send a brief update soon.
-          </div>
-        </form>
-      </div>
-      <p class="idx-footnote-8j3l6t">18+ only. For entertainment only. No real money, prizes, purchases, or cash-out. Take breaks and play responsibly.</p>
+      <p class="idx-footnote">18+ only. For entertainment only. No real money, prizes, purchases, or cash-out. Take breaks and play responsibly.</p>
     </div>
   </footer>
 
-  <div class="idx-cookie-3p8v1z" data-cookie-banner role="dialog" aria-live="polite" aria-label="Cookie consent" hidden>
-    <div class="idx-cookiein-2c7m0k">
+  <div class="idx-cookie" data-cookie-banner role="dialog" aria-live="polite" aria-label="Cookie consent" hidden>
+    <div class="idx-cookiein">
       <p>We use a small cookie to remember your choice and keep the site steady.</p>
-      <div class="idx-cookieactions-6t4r9n">
+      <div class="idx-cookieactions">
         <button type="button" data-cookie-accept>Accept</button>
         <button type="button" data-cookie-decline>Decline</button>
       </div>
@@ -956,7 +802,7 @@
   </div>
 
   <script>
-    // Simple page interactions: cookie consent and newsletter feedback.
+    // Simple page interaction: cookie consent.
     (() => {
       // Cookie banner: remember the choice in localStorage.
       const banner = document.querySelector("[data-cookie-banner]");
@@ -977,27 +823,84 @@
         if (declineBtn) declineBtn.addEventListener("click", () => setChoice("declined"));
       }
 
-      // Newsletter form: swap fields for a success message.
-      const form = document.querySelector("[data-newsletter-form]");
-      const fields = document.querySelector("[data-newsletter-fields]");
-      const success = document.querySelector("[data-newsletter-success]");
-      if (form && fields && success) {
-        form.addEventListener("submit", (event) => {
-          event.preventDefault();
-          fields.setAttribute("hidden", "");
-          success.removeAttribute("hidden");
-          form.reset();
-        });
+      const games = [
+        {
+          id: "sails-of-riches",
+          name: "Sails of Riches",
+          image: "gameimages/sails-of-riches.webp",
+          description: "Raise the black flag and chase the royal fleet."
+        },
+        {
+          id: "book-of-dead-go-collect",
+          name: "Book of Dead GO Collect",
+          image: "gameimages/book-of-dead-go-collect.webp",
+          description: "Turn the page with Rich Wilde."
+        },
+        {
+          id: "3-blades-and-blessings",
+          name: "3 Blades & Blessings",
+          image: "gameimages/3-blades-and-blessings.webp",
+          description: "Three chests. One silent hero. Choose your blessing."
+        },
+        {
+          id: "mandalay-bay-riches",
+          name: "Mandalay Bay Riches",
+          image: "gameimages/mandalay-bay-riches.webp",
+          description: "Check in for reel-side luxury."
+        },
+        {
+          id: "rise-of-olympus-1000",
+          name: "Rise of Olympus 1000",
+          image: "gameimages/rise-of-olympus-1000.webp",
+          description: "The gods unite."
+        },
+        {
+          id: "piggy-blitz-casino-gold",
+          name: "Piggy Blitz Casino Gold",
+          image: "gameimages/piggy-blitz-casino-gold.webp",
+          description: "Neon lights. Busy tables. One dapper host."
+        },
+        {
+          id: "barn-busters",
+          name: "Barn Busters",
+          image: "gameimages/barn-busters.webp",
+          description: "Baa-larm! The wolf is skulking!"
+        },
+        {
+          id: "legacy-of-undead-dragon-abyssways",
+          name: "Legacy of Undead Dragon Abyssways",
+          image: "gameimages/legacy-of-undead-dragon-abyssways.webp",
+          description: "Grand ghosts guard the gold!"
+        },
+        {
+          id: "mole-digger",
+          name: "Mole Digger",
+          image: "gameimages/mole-digger.webp",
+          description: "Dig deep with our hard-hat hero."
+        }
+      ];
+
+      const featuredGames = document.querySelector("[data-featured-games]");
+      if (featuredGames) {
+        featuredGames.innerHTML = games.map((game) => `
+          <article>
+            <figure>
+              <img src="${game.image}" alt="${game.name} preview">
+            </figure>
+            <div>
+              <span>Play'n GO</span>
+              <h3>${game.name}</h3>
+              <p>${game.description}</p>
+              <a href="play.html?game=${encodeURIComponent(game.id)}">Play now</a>
+            </div>
+          </article>
+        `).join("");
       }
     })();
   </script>
 </body>
 </html>
-    .idx-herocard1-5r8a1n p,
-    .idx-herocard2-9p4b7v p {
-      color: var(--muted);
-      font-size: 0.95rem;
-    }
+
 
 
 

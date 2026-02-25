@@ -7,22 +7,7 @@
   <meta name="description" content="Read the Suominettipelit Privacy Policy to learn what data we collect and how we use it.">
   <link rel="icon" href="favicon.ico">
   <style>
-
-    @font-face {
-      font-family: "Happy Vibes";
-      src: url("happy-vibes-happy-vibes-svg-400.otf") format("opentype");
-      font-weight: 400;
-      font-style: normal;
-      font-display: swap;
-    }
-    @font-face {
-      font-family: "Happy Vibes Outline";
-      src: url("happy-vibes-happy-vibes-outline-svg-400.otf") format("opentype");
-      font-weight: 400;
-      font-style: normal;
-      font-display: swap;
-    }
-    :root {
+:root{
       --bg: #f6f1e7;
       --ink: #1c1a15;
       --muted: #6a5f52;
@@ -36,8 +21,8 @@
       --radius: 20px;
       --maxw: 1120px;
     }
-    * { box-sizing: border-box; margin: 0; padding: 0; }
-    body {
+    *{ box-sizing: border-box; margin: 0; padding: 0; }
+    body{
       font-family: "Palatino Linotype", "Book Antiqua", Palatino, serif;
       color: var(--ink);
       background: radial-gradient(circle at top, #fff5e6 0%, #f6f1e7 55%, #f0e5d8 100%);
@@ -45,8 +30,7 @@
       line-height: 1.6;
       position: relative;
     }
-    body::before,
-    body::after {
+    body::before, body::after{
       content: "";
       position: fixed;
       inset: 0;
@@ -57,28 +41,25 @@
         radial-gradient(260px 260px at 90% 10%, rgba(242, 201, 76, 0.2), transparent 72%),
         radial-gradient(300px 300px at 90% 80%, rgba(229, 90, 61, 0.12), transparent 75%);
     }
-    h1, h2, h3 {
+    h1, h2, h3{
       font-family: "Happy Vibes", "Trebuchet MS", "Lucida Sans Unicode", "Lucida Grande", sans-serif;
       letter-spacing: 0.2px;
       line-height: 1.2;
     }
-    a { color: inherit; text-decoration: none; }
-    img { max-width: 100%; display: block; }
-    button {
+    a{ color: inherit; text-decoration: none; }
+    img{ max-width: 100%; display: block; }
+    button{
       font-family: inherit;
       border: none;
       background: none;
       cursor: pointer;
     }
-    a:focus-visible,
-    button:focus-visible,
-    input:focus-visible,
-    textarea:focus-visible {
+    a:focus-visible, button:focus-visible, input:focus-visible, textarea:focus-visible{
       outline: 2px solid var(--teal);
       outline-offset: 2px;
     }
 
-    .pol-header-3a6f9m {
+    .pol-header{
       position: sticky;
       top: 0;
       z-index: 20;
@@ -86,25 +67,19 @@
       border-bottom: 1px solid var(--line);
       backdrop-filter: blur(6px);
     }
-    .pol-headin-0q7w2e,
-    .pol-hero-6s2d9p,
-    .pol-benefits-6q1v7m,
-    .pol-featured-8u2r5d,
-    .pol-stats-4x9k0p,
-    .pol-steps-7g1s4l,
-    .pol-footin-0z6n8d {
+    .pol-headin, .pol-hero, .pol-featured, .pol-footin{
       max-width: var(--maxw);
       margin: 0 auto;
       padding: 0 20px;
     }
-    .pol-headin-0q7w2e {
+    .pol-headin{
       display: flex;
       align-items: center;
       justify-content: space-between;
       gap: 16px;
       padding: 16px 20px;
     }
-    .pol-brand-8t4j1c {
+    .pol-brand{
       display: inline-flex;
       align-items: center;
       gap: 10px;
@@ -112,43 +87,34 @@
       font-weight: 400;
       font-size: 1.1rem;
     }
-    .pol-brand-8t4j1c svg {
+    .pol-brand svg{
       width: 34px;
       height: 34px;
     }
-    .pol-nav-5n8s0d ul {
+    .pol-nav ul{
       list-style: none;
       display: flex;
       gap: 16px;
       flex-wrap: wrap;
       font-size: 0.95rem;
     }
-    .pol-nav-5n8s0d a {
+    .pol-nav a{
       padding: 6px 8px;
       border-radius: 999px;
     }
-    .pol-nav-5n8s0d a:hover {
+    .pol-nav a:hover{
       background: #f2e5d8;
     }
-    .pol-cta-9v2c6a {
-      background: var(--accent);
-      color: #fff;
-      padding: 10px 18px;
-      border-radius: 999px;
-      font-weight: 700;
-      box-shadow: 0 8px 20px rgba(229, 90, 61, 0.25);
-    }
-    .pol-cta-9v2c6a:hover { background: var(--accent-dark); }
 
-    .pol-main-1k6p0x { padding: 28px 0 80px; }
+    .pol-main{ padding: 28px 0 80px; }
 
-    .pol-hero-6s2d9p { padding: 36px 20px 20px; }
-    .pol-herogrid-4m1z8b {
+    .pol-hero{ padding: 36px 20px 20px; }
+    .pol-herogrid{
       display: grid;
       gap: 28px;
       align-items: center;
     }
-    .pol-herokicker-5d7k2m {
+    .pol-herokicker{
       text-transform: uppercase;
       font-size: 0.78rem;
       letter-spacing: 2px;
@@ -156,23 +122,23 @@
       font-weight: 700;
       margin-bottom: 12px;
     }
-    .pol-hero-6s2d9p h1 {
+    .pol-hero h1{
       font-size: clamp(2.2rem, 3.2vw, 3.3rem);
       margin-bottom: 12px;
     }
-    .pol-hero-6s2d9p p {
+    .pol-hero p{
       color: var(--muted);
       font-size: 1.05rem;
       margin-bottom: 16px;
       max-width: 540px;
     }
-    .pol-heroact-8e9t1u {
+    .pol-heroact{
       display: flex;
       gap: 12px;
       flex-wrap: wrap;
       margin: 18px 0;
     }
-    .pol-heroact-8e9t1u a {
+    .pol-heroact a{
       padding: 12px 18px;
       border-radius: 999px;
       font-weight: 700;
@@ -181,19 +147,19 @@
       color: #fff;
       box-shadow: 0 12px 24px rgba(15, 129, 138, 0.2);
     }
-    .pol-heroact-8e9t1u a:last-child {
+    .pol-heroact a:last-child{
       background: transparent;
       color: var(--teal);
       border-color: var(--teal);
       box-shadow: none;
     }
-    .pol-heronote-7c3r2f {
+    .pol-heronote{
       font-size: 0.9rem;
       color: var(--muted);
       border-left: 3px solid var(--gold);
       padding-left: 10px;
     }
-    .pol-heroviz-2w6n0q {
+    .pol-heroviz{
       position: relative;
       min-height: 280px;
       border-radius: var(--radius);
@@ -202,213 +168,76 @@
       padding: 26px;
       box-shadow: var(--shadow);
     }
-    .pol-herobubble-1d9f3k {
-      position: absolute;
-      inset: 20px 40px auto auto;
-      width: 140px;
-      height: 140px;
-      border-radius: 50%;
-      background: radial-gradient(circle, rgba(242, 201, 76, 0.7), rgba(242, 201, 76, 0));
-      filter: blur(2px);
-    }
-    .pol-herostack-0h2l9s {
+    .pol-herostack{
       display: grid;
       gap: 16px;
       position: relative;
       z-index: 1;
     }
-    .pol-herocard1-5r8a1n,
-    .pol-herocard2-9p4b7v {
+    .pol-herocard1, .pol-herocard2{
       background: var(--card);
       border-radius: 16px;
       padding: 16px 18px;
       border: 1px solid rgba(231, 215, 199, 0.9);
     }
-    .pol-herocard1-5r8a1n h3,
-    .pol-herocard2-9p4b7v h3 {
+    .pol-herocard1 h3, .pol-herocard2 h3{
       margin-bottom: 6px;
     }
 
-    .pol-benefits-6q1v7m { padding: 36px 20px; }
-    .pol-benefits-6q1v7m h2 { margin-bottom: 18px; }
-    .pol-benefitgrid-3t6c1j {
-      display: grid;
-      gap: 16px;
-    }
-    .pol-benefitgrid-3t6c1j article {
-      background: #fff;
-      border-radius: 18px;
-      padding: 18px;
-      border: 1px solid var(--line);
-      box-shadow: 0 8px 20px rgba(20, 16, 10, 0.06);
-    }
-
-    .pol-featured-8u2r5d { padding: 36px 20px; }
-    .pol-featuredhead-2f7n1x {
+    .pol-featured{ padding: 36px 20px; }
+    .pol-featuredhead{
       display: flex;
       flex-direction: column;
       gap: 6px;
       margin-bottom: 18px;
     }
-    .pol-policybox-6j2n9k {
+    .pol-policybox{
       background: #fff;
       border-radius: 20px;
       padding: 20px;
       border: 1px solid var(--line);
       box-shadow: 0 10px 24px rgba(20, 16, 10, 0.08);
     }
-    .pol-policylist-4t8c1v {
+    .pol-policylist{
       list-style: decimal;
       padding-left: 20px;
       display: grid;
       gap: 16px;
     }
-    .pol-policylist-4t8c1v li {
+    .pol-policylist li{
       display: grid;
       gap: 6px;
       color: var(--muted);
     }
-    .pol-policylist-4t8c1v h3 { color: var(--ink); }
-    .pol-featuredgrid-1b6m8s {
-      display: grid;
-      gap: 18px;
-    }
-    .pol-featuredgrid-1b6m8s article {
-      background: var(--card);
-      border-radius: 20px;
-      padding: 18px;
-      border: 1px solid var(--line);
-      display: grid;
-      gap: 10px;
-    }
-    .pol-featuredgrid-1b6m8s svg { width: 100%; height: 120px; }
-    .pol-featuredgrid-1b6m8s a {
-      justify-self: start;
-      background: var(--accent);
-      color: #fff;
-      padding: 8px 14px;
-      border-radius: 999px;
-      font-weight: 700;
-    }
+    .pol-policylist h3{ color: var(--ink); }
 
-    .pol-stats-4x9k0p {
-      padding: 26px 20px;
-      margin: 10px 0 30px;
-    }
-    .pol-statsgrid-9y2w6h {
-      display: grid;
-      gap: 12px;
-      background: #fff;
-      border-radius: var(--radius);
-      border: 1px solid var(--line);
-      padding: 18px;
-      box-shadow: 0 10px 24px rgba(20, 16, 10, 0.08);
-    }
-    .pol-statsgrid-9y2w6h div {
-      display: grid;
-      gap: 4px;
-      text-align: center;
-    }
-    .pol-statsgrid-9y2w6h span {
-      font-size: 1.8rem;
-      font-weight: 700;
-      color: var(--teal);
-    }
-
-    .pol-steps-7g1s4l { padding: 36px 20px; }
-    .pol-steps-7g1s4l h2 { margin-bottom: 18px; }
-    .pol-stepsgrid-2q8e0a {
-      display: grid;
-      gap: 16px;
-    }
-    .pol-stepsgrid-2q8e0a article {
-      background: #fff;
-      border-radius: 18px;
-      padding: 18px;
-      border: 1px solid var(--line);
-      position: relative;
-    }
-    .pol-stepsgrid-2q8e0a article::before {
-      content: "";
-      position: absolute;
-      width: 26px;
-      height: 26px;
-      border-radius: 50%;
-      background: var(--gold);
-      top: 18px;
-      right: 18px;
-      opacity: 0.7;
-    }
-
-    .pol-footer-5m3c7r {
+    .pol-footer{
       background: #f3e8dc;
       border-top: 1px solid var(--line);
       padding: 40px 0 60px;
     }
-    .pol-footin-0z6n8d {
+    .pol-footin{
       display: grid;
       gap: 24px;
     }
-    .pol-footbrand-7u9p2c {
+    .pol-footbrand{
       display: grid;
       gap: 8px;
       max-width: 420px;
     }
-    .pol-footcols-1r5k8g {
+    .pol-footcols{
       display: grid;
       gap: 16px;
     }
-    .pol-footcols-1r5k8g ul { list-style: none; display: grid; gap: 6px; }
-    .pol-newswrap-2m9t4b {
-      background: #fff;
-      border-radius: var(--radius);
-      padding: 18px;
-      border: 1px solid var(--line);
-      box-shadow: 0 8px 18px rgba(20, 16, 10, 0.06);
-    }
-    .pol-newswrap-2m9t4b h3 { margin-bottom: 8px; }
-    .pol-newsform-6e2v0y {
-      display: grid;
-      gap: 12px;
-    }
-    .pol-newsfields-9q1x5d {
-      display: grid;
-      gap: 12px;
-    }
-    .pol-newsfields-9q1x5d label {
-      display: grid;
-      gap: 6px;
-      font-size: 0.95rem;
-      color: var(--muted);
-    }
-    .pol-newsfields-9q1x5d input {
-      padding: 10px 12px;
-      border-radius: 12px;
-      border: 1px solid var(--line);
-      background: #fff;
-    }
-    .pol-newsform-6e2v0y button {
-      justify-self: start;
-      background: var(--teal);
-      color: #fff;
-      padding: 10px 16px;
-      border-radius: 999px;
-      font-weight: 700;
-    }
-    .pol-newssuccess-4n7c1p {
-      background: rgba(15, 129, 138, 0.12);
-      border-radius: 14px;
-      padding: 12px;
-      color: var(--ink);
-    }
-    .pol-footnote-8j3l6t {
+    .pol-footcols ul{ list-style: none; display: grid; gap: 6px; }
+    .pol-footnote{
       color: var(--muted);
       font-size: 0.9rem;
       border-left: 3px solid var(--accent);
       padding-left: 10px;
     }
 
-    .pol-cookie-3p8v1z {
+    .pol-cookie{
       position: fixed;
       inset: auto 16px 16px 16px;
       background: #fff;
@@ -417,18 +246,18 @@
       box-shadow: var(--shadow);
       z-index: 30;
     }
-    .pol-cookiein-2c7m0k {
+    .pol-cookiein{
       display: grid;
       gap: 12px;
       padding: 16px;
       color: var(--muted);
     }
-    .pol-cookieactions-6t4r9n {
+    .pol-cookieactions{
       display: flex;
       gap: 10px;
       flex-wrap: wrap;
     }
-    .pol-cookieactions-6t4r9n button {
+    .pol-cookieactions button{
       padding: 8px 14px;
       border-radius: 999px;
       font-weight: 700;
@@ -436,37 +265,24 @@
       color: var(--teal);
       background: transparent;
     }
-    .pol-cookieactions-6t4r9n button:first-child {
+    .pol-cookieactions button:first-child{
       background: var(--teal);
       color: #fff;
     }
 
     @media (min-width: 820px) {
-      .pol-herogrid-4m1z8b { grid-template-columns: 1.1fr 0.9fr; }
-      .pol-benefitgrid-3t6c1j { grid-template-columns: repeat(4, 1fr); }
-      .pol-featuredgrid-1b6m8s { grid-template-columns: repeat(3, 1fr); }
-      .pol-statsgrid-9y2w6h { grid-template-columns: repeat(3, 1fr); }
-      .pol-stepsgrid-2q8e0a { grid-template-columns: repeat(3, 1fr); }
-      .pol-footin-0z6n8d { grid-template-columns: 1.1fr 1fr 1fr; align-items: start; }
-      .pol-footcols-1r5k8g { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+      .pol-herogrid{ grid-template-columns: 1.1fr 0.9fr; }
+      .pol-footin{ grid-template-columns: 1.1fr 1fr 1fr; align-items: start; }
+      .pol-footcols{ grid-template-columns: repeat(2, minmax(0, 1fr)); }
     }
 
     @media (prefers-reduced-motion: reduce) {
-      * { animation: none !important; transition: none !important; }
+      *{ animation: none !important; transition: none !important; }
     }
 
-    .pol-hero-6s2d9p,
-    .pol-benefits-6q1v7m,
-    .pol-featured-8u2r5d,
-    .pol-stats-4x9k0p,
-    .pol-steps-7g1s4l {
+    .pol-hero, .pol-featured{
       animation: fadeUp 0.8s ease both;
     }
-    .pol-featuredgrid-1b6m8s article {
-      animation: floatIn 0.7s ease both;
-    }
-    .pol-featuredgrid-1b6m8s article:nth-child(2) { animation-delay: 0.1s; }
-    .pol-featuredgrid-1b6m8s article:nth-child(3) { animation-delay: 0.2s; }
 
     @keyframes fadeUp {
       from { opacity: 0; transform: translateY(16px); }
@@ -477,11 +293,12 @@
       to { opacity: 1; transform: translateY(0) scale(1); }
     }
   </style>
+  <link rel="stylesheet" href="assets/moonlight-theme.css">
 </head>
 <body>
-  <header class="pol-header-3a6f9m">
-    <div class="pol-headin-0q7w2e">
-      <a class="pol-brand-8t4j1c" href="index.html" aria-label="Suominettipelit home">
+  <header class="pol-header">
+    <div class="pol-headin">
+      <a class="pol-brand" href="index.html" aria-label="Suominettipelit home">
         <svg viewBox="0 0 48 48" role="img" aria-hidden="true">
           <defs>
             <linearGradient id="pol-logo-grad" x1="0" y1="0" x2="1" y2="1">
@@ -494,7 +311,7 @@
         </svg>
         <span>Suominettipelit</span>
       </a>
-      <nav class="pol-nav-5n8s0d" aria-label="Primary">
+      <nav class="pol-nav" aria-label="Primary">
         <ul>
           <li><a href="index.html">Home</a></li>
           <li><a href="games.html">Games</a></li><li><a href="about.html">About</a></li>
@@ -503,50 +320,48 @@
           <li><a href="policy.html" aria-current="page">Privacy</a></li>
         </ul>
       </nav>
-      <a class="pol-cta-9v2c6a" href="games.html">View room</a>
     </div>
   </header>
 
-    <main class="pol-main-1k6p0x">
-    <section class="pol-hero-6s2d9p">
-      <div class="pol-herogrid-4m1z8b">
+    <main class="pol-main">
+    <section class="pol-hero">
+      <div class="pol-herogrid">
         <div>
-          <p class="pol-herokicker-5d7k2m">Privacy Policy</p>
+          <p class="pol-herokicker">Privacy Policy</p>
           <h1>We keep practice play private and minimal.</h1>
           <p>This Policy explains what we collect, how we use it, and the choices you have.</p>
-          <div class="pol-heroact-8e9t1u">
+          <div class="pol-heroact">
             <a href="contact.html">Contact us</a>
             <a href="terms.html">Read Terms</a>
           </div>
-          <p class="pol-heronote-7c3r2f">Effective date: 2026-01-15.</p>
+          <p class="pol-heronote">Effective date: 2026-01-15.</p>
         </div>
-        <div class="pol-heroviz-2w6n0q">
-          <div class="pol-herobubble-1d9f3k"></div>
-          <div class="pol-herostack-0h2l9s">
-            <div class="pol-herocard1-5r8a1n">
+        <div class="pol-heroviz">
+          <div class="pol-herostack">
+            <div class="pol-herocard1">
               <h3>Minimal data</h3>
               <p>We only collect what we need to run the site.</p>
             </div>
-            <div class="pol-herocard2-9p4b7v">
+            <div class="pol-herocard2">
               <h3>Clear choices</h3>
-              <p>You control cookies and newsletter opt-in.</p>
+              <p>You control cookies and contact form submissions.</p>
             </div>
           </div>
         </div>
       </div>
     </section>
 
-    <section class="pol-featured-8u2r5d">
-      <div class="pol-featuredhead-2f7n1x">
+    <section class="pol-featured">
+      <div class="pol-featuredhead">
         <h2>Privacy Policy</h2>
         <p>By using Suominettipelit, you acknowledge this Policy.</p>
       </div>
-      <div class="pol-policybox-6j2n9k">
-        <ol class="pol-policylist-4t8c1v">
+      <div class="pol-policybox">
+        <ol class="pol-policylist">
           <li>
             <h3>Data we collect</h3>
             <p>We collect basic usage data, device and browser details, and any information you submit through forms.</p>
-            <p>This includes the name or email you share for the newsletter or contact form.</p>
+            <p>This includes the name or email you share through the contact form.</p>
             <p>We do not collect payment details because the site does not sell or process purchases.</p>
           </li>
           <li>
@@ -581,7 +396,7 @@
           </li>
           <li>
             <h3>Contact</h3>
-            <p>Questions? Email hello@suominettipelit.example or use the contact page.</p>
+            <p>Questions? Email <a href="mailto:support@funandjoy.site">support@funandjoy.site</a> or use the contact page.</p>
             <p>Tell us what you need and include the email you used to contact us.</p>
           </li>
           <li>
@@ -594,18 +409,17 @@
     </section>
   </main>
 
-  <footer class="pol-footer-5m3c7r">
-    <div class="pol-footin-0z6n8d">
-      <div class="pol-footbrand-7u9p2c">
+  <footer class="pol-footer">
+    <div class="pol-footin">
+      <div class="pol-footbrand">
         <h3>Suominettipelit</h3>
         <p>A small practice lounge inspired by Nordic light and the glow of arcades.</p>
       </div>
-      <div class="pol-footcols-1r5k8g">
+      <div class="pol-footcols">
         <div>
           <h3>Explore</h3>
           <ul>
             <li><a href="games.html">Games</a></li>
-            <li><a href="contact.html">Contact</a></li>
             <li><a href="about.html">About</a></li>
           </ul>
         </div>
@@ -618,34 +432,14 @@
           </ul>
         </div>
       </div>
-      <div class="pol-newswrap-2m9t4b">
-        <h3>Get a short monthly note</h3>
-        <p>Occasional updates about new rooms, playlists, and ways to keep play relaxed.</p>
-        <form class="pol-newsform-6e2v0y" data-newsletter-form>
-          <div class="pol-newsfields-9q1x5d" data-newsletter-fields>
-            <label>
-              Name
-              <input type="text" name="name" autocomplete="name" required>
-            </label>
-            <label>
-              Email
-              <input type="email" name="email" autocomplete="email" required>
-            </label>
-            <button type="submit">Join the list</button>
-          </div>
-          <div class="pol-newssuccess-4n7c1p" data-newsletter-success hidden aria-live="polite">
-            Thanks for signing up. We will send a brief update soon.
-          </div>
-        </form>
-      </div>
-      <p class="pol-footnote-8j3l6t">18+ only. For entertainment only. No real money, prizes, purchases, or cash-out. Take breaks and play responsibly.</p>
+      <p class="pol-footnote">18+ only. For entertainment only. No real money, prizes, purchases, or cash-out. Take breaks and play responsibly.</p>
     </div>
   </footer>
 
-  <div class="pol-cookie-3p8v1z" data-cookie-banner role="dialog" aria-live="polite" aria-label="Cookie consent" hidden>
-    <div class="pol-cookiein-2c7m0k">
+  <div class="pol-cookie" data-cookie-banner role="dialog" aria-live="polite" aria-label="Cookie consent" hidden>
+    <div class="pol-cookiein">
       <p>We use a small cookie to remember your choice and keep the site steady.</p>
-      <div class="pol-cookieactions-6t4r9n">
+      <div class="pol-cookieactions">
         <button type="button" data-cookie-accept>Accept</button>
         <button type="button" data-cookie-decline>Decline</button>
       </div>
@@ -653,7 +447,7 @@
   </div>
 
   <script>
-    // Simple page interactions: cookie consent and newsletter feedback.
+    // Simple page interaction: cookie consent.
     (() => {
       // Cookie banner: remember the choice in localStorage.
       const banner = document.querySelector("[data-cookie-banner]");
@@ -673,23 +467,13 @@
         if (acceptBtn) acceptBtn.addEventListener("click", () => setChoice("accepted"));
         if (declineBtn) declineBtn.addEventListener("click", () => setChoice("declined"));
       }
-
-      // Newsletter form: swap fields for a success message.
-      const form = document.querySelector("[data-newsletter-form]");
-      const fields = document.querySelector("[data-newsletter-fields]");
-      const success = document.querySelector("[data-newsletter-success]");
-      if (form && fields && success) {
-        form.addEventListener("submit", (event) => {
-          event.preventDefault();
-          fields.setAttribute("hidden", "");
-          success.removeAttribute("hidden");
-          form.reset();
-        });
-      }
     })();
   </script>
 </body>
 </html>
+
+
+
 
 
 

@@ -7,22 +7,7 @@
   <meta name="description" content="Contact Suominettipelit with questions or feedback about practice play and room themes.">
   <link rel="icon" href="favicon.ico">
   <style>
-
-    @font-face {
-      font-family: "Happy Vibes";
-      src: url("happy-vibes-happy-vibes-svg-400.otf") format("opentype");
-      font-weight: 400;
-      font-style: normal;
-      font-display: swap;
-    }
-    @font-face {
-      font-family: "Happy Vibes Outline";
-      src: url("happy-vibes-happy-vibes-outline-svg-400.otf") format("opentype");
-      font-weight: 400;
-      font-style: normal;
-      font-display: swap;
-    }
-    :root {
+:root{
       --bg: #f6f1e7;
       --ink: #1c1a15;
       --muted: #6a5f52;
@@ -36,8 +21,8 @@
       --radius: 20px;
       --maxw: 1120px;
     }
-    * { box-sizing: border-box; margin: 0; padding: 0; }
-    body {
+    *{ box-sizing: border-box; margin: 0; padding: 0; }
+    body{
       font-family: "Palatino Linotype", "Book Antiqua", Palatino, serif;
       color: var(--ink);
       background: radial-gradient(circle at top, #fff5e6 0%, #f6f1e7 55%, #f0e5d8 100%);
@@ -45,8 +30,7 @@
       line-height: 1.6;
       position: relative;
     }
-    body::before,
-    body::after {
+    body::before, body::after{
       content: "";
       position: fixed;
       inset: 0;
@@ -57,28 +41,25 @@
         radial-gradient(260px 260px at 90% 10%, rgba(242, 201, 76, 0.2), transparent 72%),
         radial-gradient(300px 300px at 90% 80%, rgba(229, 90, 61, 0.12), transparent 75%);
     }
-    h1, h2, h3 {
+    h1, h2, h3{
       font-family: "Happy Vibes", "Trebuchet MS", "Lucida Sans Unicode", "Lucida Grande", sans-serif;
       letter-spacing: 0.2px;
       line-height: 1.2;
     }
-    a { color: inherit; text-decoration: none; }
-    img { max-width: 100%; display: block; }
-    button {
+    a{ color: inherit; text-decoration: none; }
+    img{ max-width: 100%; display: block; }
+    button{
       font-family: inherit;
       border: none;
       background: none;
       cursor: pointer;
     }
-    a:focus-visible,
-    button:focus-visible,
-    input:focus-visible,
-    textarea:focus-visible {
+    a:focus-visible, button:focus-visible, input:focus-visible, textarea:focus-visible{
       outline: 2px solid var(--teal);
       outline-offset: 2px;
     }
 
-    .cnt-header-3a6f9m {
+    .cnt-header{
       position: sticky;
       top: 0;
       z-index: 20;
@@ -86,25 +67,19 @@
       border-bottom: 1px solid var(--line);
       backdrop-filter: blur(6px);
     }
-    .cnt-headin-0q7w2e,
-    .cnt-hero-6s2d9p,
-    .cnt-benefits-6q1v7m,
-    .cnt-featured-8u2r5d,
-    .cnt-stats-4x9k0p,
-    .cnt-steps-7g1s4l,
-    .cnt-footin-0z6n8d {
+    .cnt-headin, .cnt-hero, .cnt-featured, .cnt-footin{
       max-width: var(--maxw);
       margin: 0 auto;
       padding: 0 20px;
     }
-    .cnt-headin-0q7w2e {
+    .cnt-headin{
       display: flex;
       align-items: center;
       justify-content: space-between;
       gap: 16px;
       padding: 16px 20px;
     }
-    .cnt-brand-8t4j1c {
+    .cnt-brand{
       display: inline-flex;
       align-items: center;
       gap: 10px;
@@ -112,43 +87,34 @@
       font-weight: 400;
       font-size: 1.1rem;
     }
-    .cnt-brand-8t4j1c svg {
+    .cnt-brand svg{
       width: 34px;
       height: 34px;
     }
-    .cnt-nav-5n8s0d ul {
+    .cnt-nav ul{
       list-style: none;
       display: flex;
       gap: 16px;
       flex-wrap: wrap;
       font-size: 0.95rem;
     }
-    .cnt-nav-5n8s0d a {
+    .cnt-nav a{
       padding: 6px 8px;
       border-radius: 999px;
     }
-    .cnt-nav-5n8s0d a:hover {
+    .cnt-nav a:hover{
       background: #f2e5d8;
     }
-    .cnt-cta-9v2c6a {
-      background: var(--accent);
-      color: #fff;
-      padding: 10px 18px;
-      border-radius: 999px;
-      font-weight: 700;
-      box-shadow: 0 8px 20px rgba(229, 90, 61, 0.25);
-    }
-    .cnt-cta-9v2c6a:hover { background: var(--accent-dark); }
 
-    .cnt-main-1k6p0x { padding: 28px 0 80px; }
+    .cnt-main{ padding: 28px 0 80px; }
 
-    .cnt-hero-6s2d9p { padding: 36px 20px 20px; }
-    .cnt-herogrid-4m1z8b {
+    .cnt-hero{ padding: 36px 20px 20px; }
+    .cnt-herogrid{
       display: grid;
       gap: 28px;
       align-items: center;
     }
-    .cnt-herokicker-5d7k2m {
+    .cnt-herokicker{
       text-transform: uppercase;
       font-size: 0.78rem;
       letter-spacing: 2px;
@@ -156,23 +122,23 @@
       font-weight: 700;
       margin-bottom: 12px;
     }
-    .cnt-hero-6s2d9p h1 {
+    .cnt-hero h1{
       font-size: clamp(2.2rem, 3.2vw, 3.3rem);
       margin-bottom: 12px;
     }
-    .cnt-hero-6s2d9p p {
+    .cnt-hero p{
       color: var(--muted);
       font-size: 1.05rem;
       margin-bottom: 16px;
       max-width: 540px;
     }
-    .cnt-heroact-8e9t1u {
+    .cnt-heroact{
       display: flex;
       gap: 12px;
       flex-wrap: wrap;
       margin: 18px 0;
     }
-    .cnt-heroact-8e9t1u a {
+    .cnt-heroact a{
       padding: 12px 18px;
       border-radius: 999px;
       font-weight: 700;
@@ -181,19 +147,19 @@
       color: #fff;
       box-shadow: 0 12px 24px rgba(15, 129, 138, 0.2);
     }
-    .cnt-heroact-8e9t1u a:last-child {
+    .cnt-heroact a:last-child{
       background: transparent;
       color: var(--teal);
       border-color: var(--teal);
       box-shadow: none;
     }
-    .cnt-heronote-7c3r2f {
+    .cnt-heronote{
       font-size: 0.9rem;
       color: var(--muted);
       border-left: 3px solid var(--gold);
       padding-left: 10px;
     }
-    .cnt-heroviz-2w6n0q {
+    .cnt-heroviz{
       position: relative;
       min-height: 280px;
       border-radius: var(--radius);
@@ -202,60 +168,34 @@
       padding: 26px;
       box-shadow: var(--shadow);
     }
-    .cnt-herobubble-1d9f3k {
-      position: absolute;
-      inset: 20px 40px auto auto;
-      width: 140px;
-      height: 140px;
-      border-radius: 50%;
-      background: radial-gradient(circle, rgba(242, 201, 76, 0.7), rgba(242, 201, 76, 0));
-      filter: blur(2px);
-    }
-    .cnt-herostack-0h2l9s {
+    .cnt-herostack{
       display: grid;
       gap: 16px;
       position: relative;
       z-index: 1;
     }
-    .cnt-herocard1-5r8a1n,
-    .cnt-herocard2-9p4b7v {
+    .cnt-herocard1, .cnt-herocard2{
       background: var(--card);
       border-radius: 16px;
       padding: 16px 18px;
       border: 1px solid rgba(231, 215, 199, 0.9);
     }
-    .cnt-herocard1-5r8a1n h3,
-    .cnt-herocard2-9p4b7v h3 {
+    .cnt-herocard1 h3, .cnt-herocard2 h3{
       margin-bottom: 6px;
     }
 
-    .cnt-benefits-6q1v7m { padding: 36px 20px; }
-    .cnt-benefits-6q1v7m h2 { margin-bottom: 18px; }
-    .cnt-benefitgrid-3t6c1j {
-      display: grid;
-      gap: 16px;
-    }
-    .cnt-benefitgrid-3t6c1j article {
-      background: #fff;
-      border-radius: 18px;
-      padding: 18px;
-      border: 1px solid var(--line);
-      box-shadow: 0 8px 20px rgba(20, 16, 10, 0.06);
-    }
-
-    .cnt-featured-8u2r5d { padding: 36px 20px; }
-    .cnt-featuredhead-2f7n1x {
+    .cnt-featured{ padding: 36px 20px; }
+    .cnt-featuredhead{
       display: flex;
       flex-direction: column;
       gap: 6px;
       margin-bottom: 18px;
     }
-    .cnt-featuredgrid-1b6m8s {
+    .cnt-featuredgrid{
       display: grid;
       gap: 20px;
     }
-    .cnt-contactbox-3r8d2k,
-    .cnt-quickbox-1g6t9w {
+    .cnt-quickbox{
       background: #fff;
       border-radius: 20px;
       padding: 18px;
@@ -264,161 +204,38 @@
       gap: 12px;
       box-shadow: 0 10px 24px rgba(20, 16, 10, 0.08);
     }
-    .cnt-contactfields-9k2m7v {
-      display: grid;
-      gap: 12px;
-    }
-    .cnt-contactfields-9k2m7v label {
-      display: grid;
-      gap: 6px;
-      font-size: 0.95rem;
-      color: var(--muted);
-    }
-    .cnt-contactfields-9k2m7v input,
-    .cnt-contactfields-9k2m7v textarea {
-      padding: 10px 12px;
-      border-radius: 12px;
-      border: 1px solid var(--line);
-      background: #fff;
-      font-family: inherit;
-    }
-    .cnt-contactfields-9k2m7v textarea { min-height: 120px; resize: vertical; }
-    .cnt-contactfields-9k2m7v button {
-      justify-self: start;
-      background: var(--accent);
-      color: #fff;
-      padding: 10px 16px;
-      border-radius: 999px;
-      font-weight: 700;
-    }
-    .cnt-contactsuccess-5b1n7h {
-      background: rgba(15, 129, 138, 0.12);
-      border-radius: 12px;
-      padding: 12px;
-    }
-    .cnt-quickbox-1g6t9w h3 { margin-bottom: 8px; }
-    .cnt-quickbox-1g6t9w dl { display: grid; gap: 12px; }
-    .cnt-quickbox-1g6t9w dt { font-weight: 700; }
-    .cnt-quickbox-1g6t9w dd { margin-left: 0; color: var(--muted); }
+    .cnt-quickbox h3{ margin-bottom: 8px; }
+    .cnt-quickbox dl{ display: grid; gap: 12px; }
+    .cnt-quickbox dt{ font-weight: 700; }
+    .cnt-quickbox dd{ margin-left: 0; color: var(--muted); }
 
-    .cnt-stats-4x9k0p {
-      padding: 26px 20px;
-      margin: 10px 0 30px;
-    }
-    .cnt-statsgrid-9y2w6h {
-      display: grid;
-      gap: 12px;
-      background: #fff;
-      border-radius: var(--radius);
-      border: 1px solid var(--line);
-      padding: 18px;
-      box-shadow: 0 10px 24px rgba(20, 16, 10, 0.08);
-    }
-    .cnt-statsgrid-9y2w6h div {
-      display: grid;
-      gap: 4px;
-      text-align: center;
-    }
-    .cnt-statsgrid-9y2w6h span {
-      font-size: 1.8rem;
-      font-weight: 700;
-      color: var(--teal);
-    }
-
-    .cnt-steps-7g1s4l { padding: 36px 20px; }
-    .cnt-steps-7g1s4l h2 { margin-bottom: 18px; }
-    .cnt-stepsgrid-2q8e0a {
-      display: grid;
-      gap: 16px;
-    }
-    .cnt-stepsgrid-2q8e0a article {
-      background: #fff;
-      border-radius: 18px;
-      padding: 18px;
-      border: 1px solid var(--line);
-      position: relative;
-    }
-    .cnt-stepsgrid-2q8e0a article::before {
-      content: "";
-      position: absolute;
-      width: 26px;
-      height: 26px;
-      border-radius: 50%;
-      background: var(--gold);
-      top: 18px;
-      right: 18px;
-      opacity: 0.7;
-    }
-
-    .cnt-footer-5m3c7r {
+    .cnt-footer{
       background: #f3e8dc;
       border-top: 1px solid var(--line);
       padding: 40px 0 60px;
     }
-    .cnt-footin-0z6n8d {
+    .cnt-footin{
       display: grid;
       gap: 24px;
     }
-    .cnt-footbrand-7u9p2c {
+    .cnt-footbrand{
       display: grid;
       gap: 8px;
       max-width: 420px;
     }
-    .cnt-footcols-1r5k8g {
+    .cnt-footcols{
       display: grid;
       gap: 16px;
     }
-    .cnt-footcols-1r5k8g ul { list-style: none; display: grid; gap: 6px; }
-    .cnt-newswrap-2m9t4b {
-      background: #fff;
-      border-radius: var(--radius);
-      padding: 18px;
-      border: 1px solid var(--line);
-      box-shadow: 0 8px 18px rgba(20, 16, 10, 0.06);
-    }
-    .cnt-newswrap-2m9t4b h3 { margin-bottom: 8px; }
-    .cnt-newsform-6e2v0y {
-      display: grid;
-      gap: 12px;
-    }
-    .cnt-newsfields-9q1x5d {
-      display: grid;
-      gap: 12px;
-    }
-    .cnt-newsfields-9q1x5d label {
-      display: grid;
-      gap: 6px;
-      font-size: 0.95rem;
-      color: var(--muted);
-    }
-    .cnt-newsfields-9q1x5d input {
-      padding: 10px 12px;
-      border-radius: 12px;
-      border: 1px solid var(--line);
-      background: #fff;
-    }
-    .cnt-newsform-6e2v0y button {
-      justify-self: start;
-      background: var(--teal);
-      color: #fff;
-      padding: 10px 16px;
-      border-radius: 999px;
-      font-weight: 700;
-    }
-    .cnt-newssuccess-4n7c1p {
-      background: rgba(15, 129, 138, 0.12);
-      border-radius: 14px;
-      padding: 12px;
-      color: var(--ink);
-    }
-    .cnt-footnote-8j3l6t {
+    .cnt-footcols ul{ list-style: none; display: grid; gap: 6px; }
+    .cnt-footnote{
       color: var(--muted);
       font-size: 0.9rem;
       border-left: 3px solid var(--accent);
       padding-left: 10px;
     }
 
-    .cnt-cookie-3p8v1z {
+    .cnt-cookie{
       position: fixed;
       inset: auto 16px 16px 16px;
       background: #fff;
@@ -427,18 +244,18 @@
       box-shadow: var(--shadow);
       z-index: 30;
     }
-    .cnt-cookiein-2c7m0k {
+    .cnt-cookiein{
       display: grid;
       gap: 12px;
       padding: 16px;
       color: var(--muted);
     }
-    .cnt-cookieactions-6t4r9n {
+    .cnt-cookieactions{
       display: flex;
       gap: 10px;
       flex-wrap: wrap;
     }
-    .cnt-cookieactions-6t4r9n button {
+    .cnt-cookieactions button{
       padding: 8px 14px;
       border-radius: 999px;
       font-weight: 700;
@@ -446,36 +263,29 @@
       color: var(--teal);
       background: transparent;
     }
-    .cnt-cookieactions-6t4r9n button:first-child {
+    .cnt-cookieactions button:first-child{
       background: var(--teal);
       color: #fff;
     }
 
     @media (min-width: 820px) {
-      .cnt-herogrid-4m1z8b { grid-template-columns: 1.1fr 0.9fr; }
-      .cnt-benefitgrid-3t6c1j { grid-template-columns: repeat(4, 1fr); }
-      .cnt-featuredgrid-1b6m8s { grid-template-columns: 1.1fr 0.9fr; }
-      .cnt-statsgrid-9y2w6h { grid-template-columns: repeat(3, 1fr); }
-      .cnt-stepsgrid-2q8e0a { grid-template-columns: repeat(3, 1fr); }
-      .cnt-footin-0z6n8d { grid-template-columns: 1.1fr 1fr 1fr; align-items: start; }
-      .cnt-footcols-1r5k8g { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+      .cnt-herogrid{ grid-template-columns: 1.1fr 0.9fr; }
+      .cnt-featuredgrid{ grid-template-columns: 1.1fr 0.9fr; }
+      .cnt-footin{ grid-template-columns: 1.1fr 1fr 1fr; align-items: start; }
+      .cnt-footcols{ grid-template-columns: repeat(2, minmax(0, 1fr)); }
     }
 
     @media (prefers-reduced-motion: reduce) {
-      * { animation: none !important; transition: none !important; }
+      *{ animation: none !important; transition: none !important; }
     }
 
-    .cnt-hero-6s2d9p,
-    .cnt-benefits-6q1v7m,
-    .cnt-featured-8u2r5d,
-    .cnt-stats-4x9k0p,
-    .cnt-steps-7g1s4l {
+    .cnt-hero, .cnt-featured{
       animation: fadeUp 0.8s ease both;
     }
-    .cnt-featuredgrid-1b6m8s > div {
+    .cnt-featuredgrid > div{
       animation: floatIn 0.7s ease both;
     }
-    .cnt-featuredgrid-1b6m8s > div:nth-child(2) { animation-delay: 0.1s; }
+    .cnt-featuredgrid > div:nth-child(2){ animation-delay: 0.1s; }
 
     @keyframes fadeUp {
       from { opacity: 0; transform: translateY(16px); }
@@ -486,11 +296,12 @@
       to { opacity: 1; transform: translateY(0) scale(1); }
     }
   </style>
+  <link rel="stylesheet" href="assets/moonlight-theme.css">
 </head>
 <body>
-  <header class="cnt-header-3a6f9m">
-    <div class="cnt-headin-0q7w2e">
-      <a class="cnt-brand-8t4j1c" href="index.html" aria-label="Suominettipelit home">
+  <header class="cnt-header">
+    <div class="cnt-headin">
+      <a class="cnt-brand" href="index.html" aria-label="Suominettipelit home">
         <svg viewBox="0 0 48 48" role="img" aria-hidden="true">
           <defs>
             <linearGradient id="cnt-logo-grad" x1="0" y1="0" x2="1" y2="1">
@@ -503,7 +314,7 @@
         </svg>
         <span>Suominettipelit</span>
       </a>
-      <nav class="cnt-nav-5n8s0d" aria-label="Primary">
+      <nav class="cnt-nav" aria-label="Primary">
         <ul>
           <li><a href="index.html">Home</a></li>
           <li><a href="games.html">Games</a></li><li><a href="about.html">About</a></li>
@@ -512,33 +323,31 @@
           <li><a href="policy.html">Privacy</a></li>
         </ul>
       </nav>
-      <a class="cnt-cta-9v2c6a" href="games.html">View room</a>
     </div>
   </header>
 
-    <main class="cnt-main-1k6p0x">
-    <section class="cnt-hero-6s2d9p">
-      <div class="cnt-herogrid-4m1z8b">
+    <main class="cnt-main">
+    <section class="cnt-hero">
+      <div class="cnt-herogrid">
         <div>
-          <p class="cnt-herokicker-5d7k2m">Contact</p>
+          <p class="cnt-herokicker">Contact</p>
           <h1>We are here to help with practice-play questions.</h1>
           <p>Send a note any time. We reply with clear answers about rooms, accessibility, and how practice play works.</p>
           <p>If something looks off, tell us your device and browser so we can reproduce it.</p>
           <p>If it is just feedback, short notes are totally fine.</p>
-          <div class="cnt-heroact-8e9t1u">
+          <div class="cnt-heroact">
             <a href="play.html">Play now</a>
             <a href="games.html">View room</a>
           </div>
-          <p class="cnt-heronote-7c3r2f">18+ only. For entertainment only. No real money, prizes, purchases, or cash-out.</p>
+          <p class="cnt-heronote">18+ only. For entertainment only. No real money, prizes, purchases, or cash-out.</p>
         </div>
-        <div class="cnt-heroviz-2w6n0q">
-          <div class="cnt-herobubble-1d9f3k"></div>
-          <div class="cnt-herostack-0h2l9s">
-            <div class="cnt-herocard1-5r8a1n">
+        <div class="cnt-heroviz">
+          <div class="cnt-herostack">
+            <div class="cnt-herocard1">
               <h3>Response time</h3>
               <p>We usually reply within one or two business days. Weekends can be a little slower.</p>
             </div>
-            <div class="cnt-herocard2-9p4b7v">
+            <div class="cnt-herocard2">
               <h3>Friendly support</h3>
               <p>Straight answers and calm guidance. We keep it simple and human.</p>
             </div>
@@ -547,46 +356,24 @@
       </div>
     </section>
 
-    <section class="cnt-featured-8u2r5d">
-      <div class="cnt-featuredhead-2f7n1x">
-        <h2>Send a message</h2>
-        <p>Use the form below and we will reply soon.</p>
-        <p>You do not need to write a novel. A couple of sentences is enough.</p>
+    <section class="cnt-featured">
+      <div class="cnt-featuredhead">
+        <h2>Contact support</h2>
+        <p>Use the quick answers below for common questions.</p>
+        <p>For anything else, email <a href="mailto:support@funandjoy.site">support@funandjoy.site</a>.</p>
       </div>
-      <div class="cnt-featuredgrid-1b6m8s">
-        <div class="cnt-contactbox-3r8d2k">
-          <form data-contact-form>
-            <div class="cnt-contactfields-9k2m7v" data-contact-fields>
-              <label>
-                Name
-                <input type="text" name="name" autocomplete="name" required>
-              </label>
-              <label>
-                Email
-                <input type="email" name="email" autocomplete="email" required>
-              </label>
-              <label>
-                Message
-                <textarea name="message" required></textarea>
-              </label>
-              <button type="submit">Send message</button>
-            </div>
-            <div class="cnt-contactsuccess-5b1n7h" data-contact-success hidden aria-live="polite">
-              Thanks for the message. We will reply soon.
-            </div>
-          </form>
-        </div>
-        <div class="cnt-quickbox-1g6t9w">
+      <div class="cnt-featuredgrid">
+        <div class="cnt-quickbox">
           <h3>Quick answers</h3>
           <dl>
-            <dt>Is this real-money play?</dt>
-            <dd>No. This is a free-to-play social casino room with no deposits, prizes, or cash-out.</dd>
+            <dt>Is this practice-only play?</dt>
+            <dd>Yes. This is a free-to-play social casino room with no deposits, prizes, or cash-out.</dd>
             <dt>Why the 18+ notice?</dt>
             <dd>We want a mature, mindful space even for practice play.</dd>
             <dt>Can I suggest a room theme?</dt>
             <dd>Yes. Tell us what you want to see and we will consider it.</dd>
             <dt>Where are you based?</dt>
-            <dd>We are online only, so email is the best way to reach us.</dd>
+            <dd>We are online only, so email is the best way to reach us at <a href="mailto:support@funandjoy.site">support@funandjoy.site</a>.</dd>
             <dt>Can I remove my data?</dt>
             <dd>Yes. Send a request and we will take care of it.</dd>
           </dl>
@@ -595,18 +382,17 @@
     </section>
   </main>
 
-  <footer class="cnt-footer-5m3c7r">
-    <div class="cnt-footin-0z6n8d">
-      <div class="cnt-footbrand-7u9p2c">
+  <footer class="cnt-footer">
+    <div class="cnt-footin">
+      <div class="cnt-footbrand">
         <h3>Suominettipelit</h3>
         <p>A small practice lounge inspired by Nordic light and the glow of arcades.</p>
       </div>
-      <div class="cnt-footcols-1r5k8g">
+      <div class="cnt-footcols">
         <div>
           <h3>Explore</h3>
           <ul>
             <li><a href="games.html">Games</a></li>
-            <li><a href="contact.html">Contact</a></li>
             <li><a href="about.html">About</a></li>
           </ul>
         </div>
@@ -619,34 +405,14 @@
           </ul>
         </div>
       </div>
-      <div class="cnt-newswrap-2m9t4b">
-        <h3>Get a short monthly note</h3>
-        <p>Occasional updates about new rooms, playlists, and ways to keep play relaxed.</p>
-        <form class="cnt-newsform-6e2v0y" data-newsletter-form>
-          <div class="cnt-newsfields-9q1x5d" data-newsletter-fields>
-            <label>
-              Name
-              <input type="text" name="name" autocomplete="name" required>
-            </label>
-            <label>
-              Email
-              <input type="email" name="email" autocomplete="email" required>
-            </label>
-            <button type="submit">Join the list</button>
-          </div>
-          <div class="cnt-newssuccess-4n7c1p" data-newsletter-success hidden aria-live="polite">
-            Thanks for signing up. We will send a brief update soon.
-          </div>
-        </form>
-      </div>
-      <p class="cnt-footnote-8j3l6t">18+ only. For entertainment only. No real money, prizes, purchases, or cash-out. Take breaks and play responsibly.</p>
+      <p class="cnt-footnote">18+ only. For entertainment only. No real money, prizes, purchases, or cash-out. Take breaks and play responsibly.</p>
     </div>
   </footer>
 
-  <div class="cnt-cookie-3p8v1z" data-cookie-banner role="dialog" aria-live="polite" aria-label="Cookie consent" hidden>
-    <div class="cnt-cookiein-2c7m0k">
+  <div class="cnt-cookie" data-cookie-banner role="dialog" aria-live="polite" aria-label="Cookie consent" hidden>
+    <div class="cnt-cookiein">
       <p>We use a small cookie to remember your choice and keep the site steady.</p>
-      <div class="cnt-cookieactions-6t4r9n">
+      <div class="cnt-cookieactions">
         <button type="button" data-cookie-accept>Accept</button>
         <button type="button" data-cookie-decline>Decline</button>
       </div>
@@ -654,7 +420,7 @@
   </div>
 
   <script>
-    // Simple page interactions: cookie consent and form feedback.
+    // Simple page interaction: cookie consent.
     (() => {
       // Cookie banner: remember the choice in localStorage.
       const banner = document.querySelector("[data-cookie-banner]");
@@ -675,35 +441,13 @@
         if (declineBtn) declineBtn.addEventListener("click", () => setChoice("declined"));
       }
 
-      // Newsletter form: swap fields for a success message.
-      const form = document.querySelector("[data-newsletter-form]");
-      const fields = document.querySelector("[data-newsletter-fields]");
-      const success = document.querySelector("[data-newsletter-success]");
-      if (form && fields && success) {
-        form.addEventListener("submit", (event) => {
-          event.preventDefault();
-          fields.setAttribute("hidden", "");
-          success.removeAttribute("hidden");
-          form.reset();
-        });
-      }
-
-      // Contact form: show a confirmation state after submit.
-      const contactForm = document.querySelector("[data-contact-form]");
-      const contactFields = document.querySelector("[data-contact-fields]");
-      const contactSuccess = document.querySelector("[data-contact-success]");
-      if (contactForm && contactFields && contactSuccess) {
-        contactForm.addEventListener("submit", (event) => {
-          event.preventDefault();
-          contactFields.setAttribute("hidden", "");
-          contactSuccess.removeAttribute("hidden");
-          contactForm.reset();
-        });
-      }
     })();
   </script>
 </body>
 </html>
+
+
+
 
 
 

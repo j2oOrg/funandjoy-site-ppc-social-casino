@@ -7,22 +7,7 @@
   <meta name="description" content="Read the story behind Suominettipelit and how we keep practice play clear, honest, and easy to understand.">
   <link rel="icon" href="favicon.ico">
   <style>
-
-    @font-face {
-      font-family: "Happy Vibes";
-      src: url("happy-vibes-happy-vibes-svg-400.otf") format("opentype");
-      font-weight: 400;
-      font-style: normal;
-      font-display: swap;
-    }
-    @font-face {
-      font-family: "Happy Vibes Outline";
-      src: url("happy-vibes-happy-vibes-outline-svg-400.otf") format("opentype");
-      font-weight: 400;
-      font-style: normal;
-      font-display: swap;
-    }
-    :root {
+:root{
       --bg: #f6f1e7;
       --ink: #1c1a15;
       --muted: #6a5f52;
@@ -36,8 +21,8 @@
       --radius: 20px;
       --maxw: 1120px;
     }
-    * { box-sizing: border-box; margin: 0; padding: 0; }
-    body {
+    *{ box-sizing: border-box; margin: 0; padding: 0; }
+    body{
       font-family: "Palatino Linotype", "Book Antiqua", Palatino, serif;
       color: var(--ink);
       background: radial-gradient(circle at top, #fff5e6 0%, #f6f1e7 55%, #f0e5d8 100%);
@@ -45,8 +30,7 @@
       line-height: 1.6;
       position: relative;
     }
-    body::before,
-    body::after {
+    body::before, body::after{
       content: "";
       position: fixed;
       inset: 0;
@@ -57,28 +41,25 @@
         radial-gradient(260px 260px at 90% 10%, rgba(242, 201, 76, 0.2), transparent 72%),
         radial-gradient(300px 300px at 90% 80%, rgba(229, 90, 61, 0.12), transparent 75%);
     }
-    h1, h2, h3 {
+    h1, h2, h3{
       font-family: "Happy Vibes", "Trebuchet MS", "Lucida Sans Unicode", "Lucida Grande", sans-serif;
       letter-spacing: 0.2px;
       line-height: 1.2;
     }
-    a { color: inherit; text-decoration: none; }
-    img { max-width: 100%; display: block; }
-    button {
+    a{ color: inherit; text-decoration: none; }
+    img{ max-width: 100%; display: block; }
+    button{
       font-family: inherit;
       border: none;
       background: none;
       cursor: pointer;
     }
-    a:focus-visible,
-    button:focus-visible,
-    input:focus-visible,
-    textarea:focus-visible {
+    a:focus-visible, button:focus-visible, input:focus-visible, textarea:focus-visible{
       outline: 2px solid var(--teal);
       outline-offset: 2px;
     }
 
-    .abt-header-3a6f9m {
+    .abt-header{
       position: sticky;
       top: 0;
       z-index: 20;
@@ -86,27 +67,19 @@
       border-bottom: 1px solid var(--line);
       backdrop-filter: blur(6px);
     }
-    .abt-headin-0q7w2e,
-    .abt-hero-6s2d9p,
-    .abt-benefits-6q1v7m,
-    .abt-notes-8k3p7x,
-    .abt-values-7m2q9v,
-    .abt-featured-8u2r5d,
-    .abt-stats-4x9k0p,
-    .abt-steps-7g1s4l,
-    .abt-footin-0z6n8d {
+    .abt-headin, .abt-hero, .abt-benefits, .abt-steps, .abt-footin{
       max-width: var(--maxw);
       margin: 0 auto;
       padding: 0 20px;
     }
-    .abt-headin-0q7w2e {
+    .abt-headin{
       display: flex;
       align-items: center;
       justify-content: space-between;
       gap: 16px;
       padding: 16px 20px;
     }
-    .abt-brand-8t4j1c {
+    .abt-brand{
       display: inline-flex;
       align-items: center;
       gap: 10px;
@@ -114,43 +87,34 @@
       font-weight: 400;
       font-size: 1.1rem;
     }
-    .abt-brand-8t4j1c svg {
+    .abt-brand svg{
       width: 34px;
       height: 34px;
     }
-    .abt-nav-5n8s0d ul {
+    .abt-nav ul{
       list-style: none;
       display: flex;
       gap: 16px;
       flex-wrap: wrap;
       font-size: 0.95rem;
     }
-    .abt-nav-5n8s0d a {
+    .abt-nav a{
       padding: 6px 8px;
       border-radius: 999px;
     }
-    .abt-nav-5n8s0d a:hover {
+    .abt-nav a:hover{
       background: #f2e5d8;
     }
-    .abt-cta-9v2c6a {
-      background: var(--accent);
-      color: #fff;
-      padding: 10px 18px;
-      border-radius: 999px;
-      font-weight: 700;
-      box-shadow: 0 8px 20px rgba(229, 90, 61, 0.25);
-    }
-    .abt-cta-9v2c6a:hover { background: var(--accent-dark); }
 
-    .abt-main-1k6p0x { padding: 28px 0 80px; }
+    .abt-main{ padding: 28px 0 80px; }
 
-    .abt-hero-6s2d9p { padding: 36px 20px 20px; }
-    .abt-herogrid-4m1z8b {
+    .abt-hero{ padding: 36px 20px 20px; }
+    .abt-herogrid{
       display: grid;
       gap: 28px;
       align-items: center;
     }
-    .abt-herokicker-5d7k2m {
+    .abt-herokicker{
       text-transform: uppercase;
       font-size: 0.78rem;
       letter-spacing: 2px;
@@ -158,23 +122,23 @@
       font-weight: 700;
       margin-bottom: 12px;
     }
-    .abt-hero-6s2d9p h1 {
+    .abt-hero h1{
       font-size: clamp(2.2rem, 3.2vw, 3.3rem);
       margin-bottom: 12px;
     }
-    .abt-hero-6s2d9p p {
+    .abt-hero p{
       color: var(--muted);
       font-size: 1.05rem;
       margin-bottom: 16px;
       max-width: 540px;
     }
-    .abt-heroact-8e9t1u {
+    .abt-heroact{
       display: flex;
       gap: 12px;
       flex-wrap: wrap;
       margin: 18px 0;
     }
-    .abt-heroact-8e9t1u a {
+    .abt-heroact a{
       padding: 12px 18px;
       border-radius: 999px;
       font-weight: 700;
@@ -183,19 +147,19 @@
       color: #fff;
       box-shadow: 0 12px 24px rgba(15, 129, 138, 0.2);
     }
-    .abt-heroact-8e9t1u a:last-child {
+    .abt-heroact a:last-child{
       background: transparent;
       color: var(--teal);
       border-color: var(--teal);
       box-shadow: none;
     }
-    .abt-heronote-7c3r2f {
+    .abt-heronote{
       font-size: 0.9rem;
       color: var(--muted);
       border-left: 3px solid var(--gold);
       padding-left: 10px;
     }
-    .abt-heroviz-2w6n0q {
+    .abt-heroviz{
       position: relative;
       min-height: 280px;
       border-radius: var(--radius);
@@ -204,45 +168,34 @@
       padding: 26px;
       box-shadow: var(--shadow);
     }
-    .abt-herobubble-1d9f3k {
-      position: absolute;
-      inset: 20px 40px auto auto;
-      width: 140px;
-      height: 140px;
-      border-radius: 50%;
-      background: radial-gradient(circle, rgba(242, 201, 76, 0.7), rgba(242, 201, 76, 0));
-      filter: blur(2px);
-    }
-    .abt-herostack-0h2l9s {
+    .abt-herostack{
       display: grid;
       gap: 16px;
       position: relative;
       z-index: 1;
     }
-    .abt-herocard1-5r8a1n,
-    .abt-herocard2-9p4b7v {
+    .abt-herocard1, .abt-herocard2{
       background: var(--card);
       border-radius: 16px;
       padding: 16px 18px;
       border: 1px solid rgba(231, 215, 199, 0.9);
     }
-    .abt-herocard1-5r8a1n h3,
-    .abt-herocard2-9p4b7v h3 {
+    .abt-herocard1 h3, .abt-herocard2 h3{
       margin-bottom: 6px;
     }
 
-    .abt-benefits-6q1v7m { padding: 36px 20px; }
-    .abt-benefits-6q1v7m h2 { margin-bottom: 18px; }
-    .abt-benefits-6q1v7m > p {
+    .abt-benefits{ padding: 36px 20px; }
+    .abt-benefits h2{ margin-bottom: 18px; }
+    .abt-benefits > p{
       color: var(--muted);
       max-width: 640px;
       margin-bottom: 16px;
     }
-    .abt-benefitgrid-3t6c1j {
+    .abt-benefitgrid{
       display: grid;
       gap: 16px;
     }
-    .abt-benefitgrid-3t6c1j article {
+    .abt-benefitgrid article{
       background: #fff;
       border-radius: 18px;
       padding: 18px;
@@ -250,80 +203,25 @@
       box-shadow: 0 8px 20px rgba(20, 16, 10, 0.06);
     }
 
-    .abt-featured-8u2r5d { padding: 36px 20px; }
-    .abt-featuredhead-2f7n1x {
-      display: flex;
-      flex-direction: column;
-      gap: 6px;
-      margin-bottom: 18px;
-    }
-    .abt-featuredgrid-1b6m8s {
-      display: grid;
-      gap: 18px;
-    }
-    .abt-featuredgrid-1b6m8s article {
-      background: var(--card);
-      border-radius: 20px;
-      padding: 18px;
-      border: 1px solid var(--line);
-      display: grid;
-      gap: 10px;
-    }
-    .abt-featuredgrid-1b6m8s svg { width: 100%; height: 120px; }
-    .abt-featuredgrid-1b6m8s a {
-      justify-self: start;
-      background: var(--accent);
-      color: #fff;
-      padding: 8px 14px;
-      border-radius: 999px;
-      font-weight: 700;
-    }
-
-    .abt-stats-4x9k0p {
-      padding: 26px 20px;
-      margin: 10px 0 30px;
-    }
-    .abt-statsgrid-9y2w6h {
-      display: grid;
-      gap: 12px;
-      background: #fff;
-      border-radius: var(--radius);
-      border: 1px solid var(--line);
-      padding: 18px;
-      box-shadow: 0 10px 24px rgba(20, 16, 10, 0.08);
-    }
-    .abt-statsgrid-9y2w6h div {
-      display: grid;
-      gap: 4px;
-      text-align: center;
-      justify-items: center;
-      align-content: center;
-    }
-    .abt-statsgrid-9y2w6h span {
-      font-size: 1.8rem;
-      font-weight: 700;
-      color: var(--teal);
-    }
-
-    .abt-steps-7g1s4l { padding: 36px 20px; }
-    .abt-steps-7g1s4l h2 { margin-bottom: 12px; }
-    .abt-steps-7g1s4l > p {
+    .abt-steps{ padding: 36px 20px; }
+    .abt-steps h2{ margin-bottom: 12px; }
+    .abt-steps > p{
       color: var(--muted);
       max-width: 640px;
       margin-bottom: 18px;
     }
-    .abt-stepsgrid-2q8e0a {
+    .abt-stepsgrid{
       display: grid;
       gap: 16px;
     }
-    .abt-stepsgrid-2q8e0a article {
+    .abt-stepsgrid article{
       background: #fff;
       border-radius: 18px;
       padding: 18px;
       border: 1px solid var(--line);
       position: relative;
     }
-    .abt-stepsgrid-2q8e0a article::before {
+    .abt-stepsgrid article::before{
       content: "";
       position: absolute;
       width: 26px;
@@ -335,139 +233,33 @@
       opacity: 0.7;
     }
 
-    .abt-notes-8k3p7x { padding: 40px 20px; }
-    .abt-notesgrid-2w6f9n {
-      display: grid;
-      gap: 18px;
-      background: #fff;
-      border-radius: 22px;
-      border: 1px solid var(--line);
-      padding: 22px;
-      box-shadow: var(--shadow);
-    }
-    .abt-noteslead-6r1c5y {
-      display: grid;
-      gap: 8px;
-    }
-    .abt-noteslead-6r1c5y p { color: var(--muted); }
-    .abt-notestext-9m4q2z {
-      display: grid;
-      gap: 12px;
-      color: var(--muted);
-    }
-    .abt-noteslist-3v7t8h {
-      list-style: none;
-      display: grid;
-      gap: 8px;
-      margin: 0;
-      padding: 0;
-    }
-    .abt-noteslist-3v7t8h li {
-      position: relative;
-      padding-left: 16px;
-    }
-    .abt-noteslist-3v7t8h li::before {
-      content: "";
-      position: absolute;
-      left: 0;
-      top: 0.55em;
-      width: 6px;
-      height: 6px;
-      border-radius: 50%;
-      background: var(--accent);
-    }
-
-    .abt-values-7m2q9v { padding: 40px 20px; }
-    .abt-valueshead-1c6t8k {
-      display: grid;
-      gap: 8px;
-      margin-bottom: 18px;
-      max-width: 640px;
-    }
-    .abt-valueshead-1c6t8k p { color: var(--muted); }
-    .abt-valuesgrid-4r9p2w {
-      display: grid;
-      gap: 16px;
-    }
-    .abt-valuesgrid-4r9p2w article {
-      background: #fff;
-      border-radius: 18px;
-      padding: 18px;
-      border: 1px solid var(--line);
-      box-shadow: 0 8px 20px rgba(20, 16, 10, 0.06);
-      display: grid;
-      gap: 8px;
-    }
-
-    .abt-footer-5m3c7r {
+    .abt-footer{
       background: #f3e8dc;
       border-top: 1px solid var(--line);
       padding: 40px 0 60px;
     }
-    .abt-footin-0z6n8d {
+    .abt-footin{
       display: grid;
       gap: 24px;
     }
-    .abt-footbrand-7u9p2c {
+    .abt-footbrand{
       display: grid;
       gap: 8px;
       max-width: 420px;
     }
-    .abt-footcols-1r5k8g {
+    .abt-footcols{
       display: grid;
       gap: 16px;
     }
-    .abt-footcols-1r5k8g ul { list-style: none; display: grid; gap: 6px; }
-    .abt-newswrap-2m9t4b {
-      background: #fff;
-      border-radius: var(--radius);
-      padding: 18px;
-      border: 1px solid var(--line);
-      box-shadow: 0 8px 18px rgba(20, 16, 10, 0.06);
-    }
-    .abt-newswrap-2m9t4b h3 { margin-bottom: 8px; }
-    .abt-newsform-6e2v0y {
-      display: grid;
-      gap: 12px;
-    }
-    .abt-newsfields-9q1x5d {
-      display: grid;
-      gap: 12px;
-    }
-    .abt-newsfields-9q1x5d label {
-      display: grid;
-      gap: 6px;
-      font-size: 0.95rem;
-      color: var(--muted);
-    }
-    .abt-newsfields-9q1x5d input {
-      padding: 10px 12px;
-      border-radius: 12px;
-      border: 1px solid var(--line);
-      background: #fff;
-    }
-    .abt-newsform-6e2v0y button {
-      justify-self: start;
-      background: var(--teal);
-      color: #fff;
-      padding: 10px 16px;
-      border-radius: 999px;
-      font-weight: 700;
-    }
-    .abt-newssuccess-4n7c1p {
-      background: rgba(15, 129, 138, 0.12);
-      border-radius: 14px;
-      padding: 12px;
-      color: var(--ink);
-    }
-    .abt-footnote-8j3l6t {
+    .abt-footcols ul{ list-style: none; display: grid; gap: 6px; }
+    .abt-footnote{
       color: var(--muted);
       font-size: 0.9rem;
       border-left: 3px solid var(--accent);
       padding-left: 10px;
     }
 
-    .abt-cookie-3p8v1z {
+    .abt-cookie{
       position: fixed;
       inset: auto 16px 16px 16px;
       background: #fff;
@@ -476,18 +268,18 @@
       box-shadow: var(--shadow);
       z-index: 30;
     }
-    .abt-cookiein-2c7m0k {
+    .abt-cookiein{
       display: grid;
       gap: 12px;
       padding: 16px;
       color: var(--muted);
     }
-    .abt-cookieactions-6t4r9n {
+    .abt-cookieactions{
       display: flex;
       gap: 10px;
       flex-wrap: wrap;
     }
-    .abt-cookieactions-6t4r9n button {
+    .abt-cookieactions button{
       padding: 8px 14px;
       border-radius: 999px;
       font-weight: 700;
@@ -495,41 +287,26 @@
       color: var(--teal);
       background: transparent;
     }
-    .abt-cookieactions-6t4r9n button:first-child {
+    .abt-cookieactions button:first-child{
       background: var(--teal);
       color: #fff;
     }
 
     @media (min-width: 820px) {
-      .abt-herogrid-4m1z8b { grid-template-columns: 1.1fr 0.9fr; }
-      .abt-benefitgrid-3t6c1j { grid-template-columns: repeat(4, 1fr); }
-      .abt-notesgrid-2w6f9n { grid-template-columns: 0.95fr 1.05fr; }
-      .abt-valuesgrid-4r9p2w { grid-template-columns: repeat(3, 1fr); }
-      .abt-featuredgrid-1b6m8s { grid-template-columns: repeat(3, 1fr); }
-      .abt-statsgrid-9y2w6h { grid-template-columns: repeat(3, 1fr); }
-      .abt-stepsgrid-2q8e0a { grid-template-columns: repeat(3, 1fr); }
-      .abt-footin-0z6n8d { grid-template-columns: 1.1fr 1fr 1fr; align-items: start; }
-      .abt-footcols-1r5k8g { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+      .abt-herogrid{ grid-template-columns: 1.1fr 0.9fr; }
+      .abt-benefitgrid{ grid-template-columns: repeat(4, 1fr); }
+      .abt-stepsgrid{ grid-template-columns: repeat(3, 1fr); }
+      .abt-footin{ grid-template-columns: 1.1fr 1fr 1fr; align-items: start; }
+      .abt-footcols{ grid-template-columns: repeat(2, minmax(0, 1fr)); }
     }
 
     @media (prefers-reduced-motion: reduce) {
-      * { animation: none !important; transition: none !important; }
+      *{ animation: none !important; transition: none !important; }
     }
 
-    .abt-hero-6s2d9p,
-    .abt-benefits-6q1v7m,
-    .abt-notes-8k3p7x,
-    .abt-values-7m2q9v,
-    .abt-featured-8u2r5d,
-    .abt-stats-4x9k0p,
-    .abt-steps-7g1s4l {
+    .abt-hero, .abt-benefits, .abt-steps{
       animation: fadeUp 0.8s ease both;
     }
-    .abt-featuredgrid-1b6m8s article {
-      animation: floatIn 0.7s ease both;
-    }
-    .abt-featuredgrid-1b6m8s article:nth-child(2) { animation-delay: 0.1s; }
-    .abt-featuredgrid-1b6m8s article:nth-child(3) { animation-delay: 0.2s; }
 
     @keyframes fadeUp {
       from { opacity: 0; transform: translateY(16px); }
@@ -540,11 +317,12 @@
       to { opacity: 1; transform: translateY(0) scale(1); }
     }
   </style>
+  <link rel="stylesheet" href="assets/moonlight-theme.css">
 </head>
 <body>
-  <header class="abt-header-3a6f9m">
-    <div class="abt-headin-0q7w2e">
-      <a class="abt-brand-8t4j1c" href="index.html" aria-label="Suominettipelit home">
+  <header class="abt-header">
+    <div class="abt-headin">
+      <a class="abt-brand" href="index.html" aria-label="Suominettipelit home">
         <svg viewBox="0 0 48 48" role="img" aria-hidden="true">
           <defs>
             <linearGradient id="abt-logo-grad" x1="0" y1="0" x2="1" y2="1">
@@ -557,7 +335,7 @@
         </svg>
         <span>Suominettipelit</span>
       </a>
-      <nav class="abt-nav-5n8s0d" aria-label="Primary">
+      <nav class="abt-nav" aria-label="Primary">
         <ul>
           <li><a href="index.html">Home</a></li>
           <li><a href="games.html">Games</a></li><li><a href="about.html" aria-current="page">About</a></li>
@@ -566,213 +344,93 @@
           <li><a href="policy.html">Privacy</a></li>
         </ul>
       </nav>
-      <a class="abt-cta-9v2c6a" href="games.html">View room</a>
     </div>
   </header>
 
-  <main class="abt-main-1k6p0x">
-    <section class="abt-hero-6s2d9p">
-      <div class="abt-herogrid-4m1z8b">
+  <main class="abt-main">
+    <section class="abt-hero">
+      <div class="abt-herogrid">
         <div>
-          <p class="abt-herokicker-5d7k2m">Our story</p>
-          <h1>Built as a gentle place to practice, not for real-money play.</h1>
-          <p>Suominettipelit began as a design exercise and a love of Finnish light. We wanted a free-to-play social casino lounge that feels like a quiet arcade: colorful, inviting, and easy to step away from.</p>
-          <p>In Finnish, kasinot means casinos, but for us it is the lighting and rhythm, not the money side.</p>
-          <p>Everything here runs in practice mode. There is no cash, no prizes, and no pressure to keep going.</p>
-          <p>We kept the interface simple on purpose. If you're between lectures or just tired, a single clear choice beats a giant menu.</p>
-          <p>The goal is a calm loop: open a room, play a few spins, and move on without the site pulling you back.</p>
-          <p>We also wanted the writing to sound like a real person. If something feels too slick or sales-y, we rewrite it.</p>
-          <p>The project is small on purpose. A compact lounge feels more human than a giant game list.</p>
-          <div class="abt-heroact-8e9t1u">
+          <p class="abt-herokicker">About us</p>
+          <h1>A simple social casino built for fun, practice-only play.</h1>
+          <p>Suominettipelit is a free-to-play social casino where you can browse games, pick a room, and start quickly.</p>
+          <p>Everything is practice-only. There are no deposits, no purchases, no prizes, and no cash-out.</p>
+          <p>The goal is straightforward entertainment: play for a bit, enjoy the experience, and leave whenever you want.</p>
+          <div class="abt-heroact">
             <a href="games.html">View room</a>
             <a href="play.html">Play now</a>
           </div>
-          <p class="abt-heronote-7c3r2f">18+ only. For entertainment only. No real money, prizes, purchases, or cash-out.</p>
+          <p class="abt-heronote">18+ only. For entertainment only. No real money, prizes, purchases, or cash-out.</p>
         </div>
-        <div class="abt-heroviz-2w6n0q">
-          <div class="abt-herobubble-1d9f3k"></div>
-          <div class="abt-herostack-0h2l9s">
-            <div class="abt-herocard1-5r8a1n">
-              <h3>Nordic palette</h3>
-              <p>Soft sand, cool teal, and a touch of volcanic glow.</p>
+        <div class="abt-heroviz">
+          <div class="abt-herostack">
+            <div class="abt-herocard1">
+              <h3>Easy to start</h3>
+              <p>Open the Games page, choose a title, and start in seconds.</p>
             </div>
-            <div class="abt-herocard2-9p4b7v">
-              <h3>Simple controls</h3>
-              <p>Clear labels, steady pacing, and easy exits.</p>
+            <div class="abt-herocard2">
+              <h3>Practice-only</h3>
+              <p>No real money, prizes, purchases, or cash-out.</p>
             </div>
           </div>
         </div>
       </div>
     </section>
 
-    <section class="abt-benefits-6q1v7m">
-      <h2>What you can do here</h2>
-      <p>This is less about outcomes and more about winding down. Think of it as a clean, themed space for short breaks.</p>
-      <div class="abt-benefitgrid-3t6c1j">
+    <section class="abt-benefits">
+      <h2>What this site offers</h2>
+      <p>Short sessions, clear labels, and a clean flow for quick entertainment.</p>
+      <div class="abt-benefitgrid">
         <article>
-          <h3>Pick your mood</h3>
-          <p>Choose a room that fits how you feel right now. Some are warm and bright, others are cooler and slower.</p>
+          <h3>Free-to-play games</h3>
+          <p>Browse multiple game styles and play without financial risk.</p>
         </article>
         <article>
-          <h3>Set your pace</h3>
-          <p>Spin quickly or linger on the details. If you only have five minutes, that still counts.</p>
+          <h3>Quick access</h3>
+          <p>Pick a game and launch directly from the game cards.</p>
         </article>
         <article>
-          <h3>Keep favorites</h3>
-          <p>The list stays small, so it is easy to find a room you liked without digging around.</p>
+          <h3>Simple rules</h3>
+          <p>Practice-only play with clear reminders and no hidden steps.</p>
         </article>
         <article>
-          <h3>Stay grounded</h3>
-          <p>Practice-only play with clear reminders and boundaries. No real money, no prizes, just a steady practice loop.</p>
-        </article>
-      </div>
-    </section>
-
-    <section class="abt-notes-8k3p7x">
-      <div class="abt-notesgrid-2w6f9n">
-        <div class="abt-noteslead-6r1c5y">
-          <h2>Why the site feels small</h2>
-          <p>We tried the big directory route and it felt overwhelming. Instead, we keep a single page that you can scan quickly.</p>
-          <p>It is a better fit for people who want a short break, not a long research session.</p>
-        </div>
-        <div class="abt-notestext-9m4q2z">
-          <p>When a room list gets too long, you stop remembering what you liked. The smaller set makes it easier to return to a mood you enjoyed.</p>
-          <p>We also keep the layout light on a laptop because that is where a lot of real browsing happens.</p>
-          <ul class="abt-noteslist-3v7t8h">
-            <li>Short list means less scrolling and more playing.</li>
-            <li>Clear labels keep the rules easy to see.</li>
-            <li>Simple controls make it easy to exit when you are done.</li>
-          </ul>
-        </div>
-      </div>
-    </section>
-
-    <section class="abt-featured-8u2r5d">
-      <div class="abt-featuredhead-2f7n1x">
-        <h2>Fairness and transparency</h2>
-        <p>We keep practice sessions clear, consistent, and easy to follow.</p>
-        <p>If something is simulated, we call it out plainly so there is no confusion.</p>
-        <p>We also avoid hype language. The site is for low-key play, not big promises.</p>
-      </div>
-      <div class="abt-featuredgrid-1b6m8s">
-        <article>
-          <svg viewBox="0 0 180 120" role="img" aria-hidden="true">
-            <rect width="180" height="120" rx="16" fill="#0f818a" opacity="0.12"/>
-            <path d="M30 60h120" stroke="#0f818a" stroke-width="6" stroke-linecap="round"/>
-            <circle cx="60" cy="60" r="14" fill="#f2c94c"/>
-          </svg>
-          <h3>Practice outcomes only</h3>
-          <p>Results are simulated for entertainment and have no real-world value.</p>
-          <p>Think of it like a sandbox. The outcomes are just part of the animation.</p>
-          <p>If you see a number change, it is there to set the rhythm, not to signal a reward.</p>
-        </article>
-        <article>
-          <svg viewBox="0 0 180 120" role="img" aria-hidden="true">
-            <rect width="180" height="120" rx="16" fill="#e55a3d" opacity="0.14"/>
-            <rect x="30" y="30" width="120" height="60" rx="12" fill="#fff"/>
-            <path d="M50 50h80M50 70h60" stroke="#e55a3d" stroke-width="5" stroke-linecap="round"/>
-          </svg>
-          <h3>Plain-language rules</h3>
-          <p>We explain what is happening on screen without jargon.</p>
-          <p>If a rule sounds fuzzy, we rewrite it until it feels obvious.</p>
-          <p>We try the copy out on friends first, because clear writing beats fancy writing.</p>
-        </article>
-        <article>
-          <svg viewBox="0 0 180 120" role="img" aria-hidden="true">
-            <rect width="180" height="120" rx="16" fill="#f2c94c" opacity="0.2"/>
-            <path d="M90 30v60" stroke="#0f818a" stroke-width="6" stroke-linecap="round"/>
-            <circle cx="90" cy="40" r="12" fill="#e55a3d"/>
-          </svg>
-          <h3>Gentle reminders</h3>
-          <p>We add small nudges so you can take breaks when needed.</p>
-          <p>No loud popups, just quiet reminders that you are in control.</p>
-          <p>It is easy to leave the room when you are done, and that is the point.</p>
+          <h3>Social casino vibe</h3>
+          <p>Enjoy fun, low-pressure gameplay and come back anytime.</p>
         </article>
       </div>
     </section>
 
-    <section class="abt-values-7m2q9v">
-      <div class="abt-valueshead-1c6t8k">
-        <h2>What we value</h2>
-        <p>This project is small, so the values matter. We want a calm place that respects your time.</p>
-        <p>These are the ideas we return to when we update rooms or rewrite a section.</p>
-      </div>
-      <div class="abt-valuesgrid-4r9p2w">
+    <section class="abt-steps">
+      <h2>Quick FAQ</h2>
+      <p>Short answers to the questions we hear most.</p>
+      <div class="abt-stepsgrid">
         <article>
-          <h3>Clarity over hype</h3>
-          <p>We do not try to sell big promises. The point is the mood, the pace, and the visuals.</p>
-          <p>Labels are short and honest so you are never guessing what a button does.</p>
-        </article>
-        <article>
-          <h3>Time-respectful design</h3>
-          <p>Short sessions are normal here. If you only have a few minutes, that still feels complete.</p>
-          <p>We avoid long, looping flows and keep the exit path simple.</p>
-        </article>
-        <article>
-          <h3>Accessible calm</h3>
-          <p>We aim for readable text, steady contrast, and layouts that work on a laptop or phone.</p>
-          <p>The goal is a quiet screen that feels easy to sit with, not a wall of flashing pieces.</p>
-        </article>
-      </div>
-    </section>
-
-    <section class="abt-stats-4x9k0p">
-      <div class="abt-statsgrid-9y2w6h">
-        <div>
-          <span>0</span>
-          <p>Real money involved</p>
-        </div>
-        <div>
-          <span>18+</span>
-          <p>Age requirement</p>
-        </div>
-        <div>
-          <span>100%</span>
-          <p>Practice-only sessions</p>
-        </div>
-      </div>
-    </section>
-
-    <section class="abt-steps-7g1s4l">
-      <h2>FAQ</h2>
-      <p>If something is unclear, these are the questions we get most often.</p>
-      <div class="abt-stepsgrid-2q8e0a">
-        <article>
-          <h3>Is this real-money play?</h3>
-          <p>No. It is practice-only and does not involve deposits or prizes.</p>
-        </article>
-        <article>
-          <h3>Why the 18+ rule?</h3>
-          <p>We want a mature, mindful space, even for practice play.</p>
+          <h3>Is this practice-only play?</h3>
+          <p>Yes. It is practice-only and does not involve deposits or prizes.</p>
         </article>
         <article>
           <h3>Do I need an account?</h3>
           <p>No. You can browse and play without registering.</p>
         </article>
         <article>
-          <h3>Can I play on my phone?</h3>
-          <p>Yes. The layout scales down, but it feels best on a bigger screen.</p>
-        </article>
-        <article>
-          <h3>Do you track my spins?</h3>
-          <p>No play history is stored. We only remember your cookie choice.</p>
+          <h3>Can I play on mobile?</h3>
+          <p>Yes. The layout works on mobile and desktop.</p>
         </article>
       </div>
     </section>
   </main>
 
-  <footer class="abt-footer-5m3c7r">
-    <div class="abt-footin-0z6n8d">
-      <div class="abt-footbrand-7u9p2c">
+  <footer class="abt-footer">
+    <div class="abt-footin">
+      <div class="abt-footbrand">
         <h3>Suominettipelit</h3>
         <p>A small practice lounge inspired by Nordic light and the glow of arcades.</p>
       </div>
-      <div class="abt-footcols-1r5k8g">
+      <div class="abt-footcols">
         <div>
           <h3>Explore</h3>
           <ul>
             <li><a href="games.html">Games</a></li>
-            <li><a href="contact.html">Contact</a></li>
             <li><a href="about.html" aria-current="page">About</a></li>
           </ul>
         </div>
@@ -785,34 +443,14 @@
           </ul>
         </div>
       </div>
-      <div class="abt-newswrap-2m9t4b">
-        <h3>Get a short monthly note</h3>
-        <p>Occasional updates about new rooms, playlists, and ways to keep play relaxed.</p>
-        <form class="abt-newsform-6e2v0y" data-newsletter-form>
-          <div class="abt-newsfields-9q1x5d" data-newsletter-fields>
-            <label>
-              Name
-              <input type="text" name="name" autocomplete="name" required>
-            </label>
-            <label>
-              Email
-              <input type="email" name="email" autocomplete="email" required>
-            </label>
-            <button type="submit">Join the list</button>
-          </div>
-          <div class="abt-newssuccess-4n7c1p" data-newsletter-success hidden aria-live="polite">
-            Thanks for signing up. We will send a brief update soon.
-          </div>
-        </form>
-      </div>
-      <p class="abt-footnote-8j3l6t">18+ only. For entertainment only. No real money, prizes, purchases, or cash-out. Take breaks and play responsibly.</p>
+      <p class="abt-footnote">18+ only. For entertainment only. No real money, prizes, purchases, or cash-out. Take breaks and play responsibly.</p>
     </div>
   </footer>
 
-  <div class="abt-cookie-3p8v1z" data-cookie-banner role="dialog" aria-live="polite" aria-label="Cookie consent" hidden>
-    <div class="abt-cookiein-2c7m0k">
+  <div class="abt-cookie" data-cookie-banner role="dialog" aria-live="polite" aria-label="Cookie consent" hidden>
+    <div class="abt-cookiein">
       <p>We use a small cookie to remember your choice and keep the site steady.</p>
-      <div class="abt-cookieactions-6t4r9n">
+      <div class="abt-cookieactions">
         <button type="button" data-cookie-accept>Accept</button>
         <button type="button" data-cookie-decline>Decline</button>
       </div>
@@ -820,7 +458,7 @@
   </div>
 
   <script>
-    // Simple page interactions: cookie consent and newsletter feedback.
+    // Simple page interaction: cookie consent.
     (() => {
       // Cookie banner: remember the choice in localStorage.
       const banner = document.querySelector("[data-cookie-banner]");
@@ -840,23 +478,13 @@
         if (acceptBtn) acceptBtn.addEventListener("click", () => setChoice("accepted"));
         if (declineBtn) declineBtn.addEventListener("click", () => setChoice("declined"));
       }
-
-      // Newsletter form: swap fields for a success message.
-      const form = document.querySelector("[data-newsletter-form]");
-      const fields = document.querySelector("[data-newsletter-fields]");
-      const success = document.querySelector("[data-newsletter-success]");
-      if (form && fields && success) {
-        form.addEventListener("submit", (event) => {
-          event.preventDefault();
-          fields.setAttribute("hidden", "");
-          success.removeAttribute("hidden");
-          form.reset();
-        });
-      }
     })();
   </script>
 </body>
 </html>
+
+
+
 
 
 
